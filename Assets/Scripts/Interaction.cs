@@ -9,11 +9,11 @@ public class Interaction : MonoBehaviour
 
     // Start is called before the first frame update
     private void Start()
-    {
+    {/*
         if (PlayerCollider == null)
         {
             PlayerCollider = this.GetComponent<Collider>();
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class Interaction : MonoBehaviour
         if (enter == true)
         {
             Debug.Log("entered");
+            Debug.Log(other.name);
         }
     }
 
