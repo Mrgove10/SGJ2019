@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public Button QuitButton;
     public Button PlayButton;
+    public Button QuitButton;
 
     private void Start()
     {
@@ -22,13 +22,17 @@ public class MainMenu : MonoBehaviour
 
     private void OnPlayButtonClicked()
     {
-        Debug.Log("Quit Button clicked");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("appartement");
+        Debug.Log("Play Button clicked");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Appartement");
     }
 
     private void OnQuitButtonClicked()
     {
         Debug.Log("Quit Button clicked");
-        Application.Quit();
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit ();
+        #endif
     }
 }
