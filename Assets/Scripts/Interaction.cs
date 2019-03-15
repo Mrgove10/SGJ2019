@@ -13,7 +13,6 @@ public class Interaction : MonoBehaviour
         if (PlayerCollider == null)
         {
             PlayerCollider = this.GetComponent<Collider>();
-       //     Debug.Log("ERRO NO COLLIER FOUND");
         }
     }
 
