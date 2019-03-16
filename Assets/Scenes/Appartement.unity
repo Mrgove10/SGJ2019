@@ -1642,13 +1642,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea5d01c7a6f74b7a86e3c9937459e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notificationTexture: {fileID: 2800000, guid: 657a5bf168fcab14a9c8cba8b5df0a71, type: 3}
+  notificationTexture: {fileID: 0}
   myStyle:
     m_Name: upper right
     m_Normal:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: a66b47e5308ed9946b2a023a4e9ef74d, type: 3}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_TextColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1688,8 +1688,8 @@ MonoBehaviour:
       m_Top: 50
       m_Bottom: 0
     m_Padding:
-      m_Left: 0
-      m_Right: 0
+      m_Left: 10
+      m_Right: 10
       m_Top: 0
       m_Bottom: 0
     m_Overflow:
@@ -1697,7 +1697,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 61be58163ec11ea45b0213bd1ff0eed5, type: 3}
+    m_Font: {fileID: 12800000, guid: f09b955732e969b4383f41e9f4b8152b, type: 3}
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 4
@@ -1708,8 +1708,8 @@ MonoBehaviour:
     m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 0
     m_FixedHeight: 0
-    m_StretchWidth: 0
-    m_StretchHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 1
   startinPos: {x: 1140, y: -100}
   endPos: {x: 1140, y: 0}
   size: {x: 400, y: 100}
