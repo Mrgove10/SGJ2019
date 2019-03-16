@@ -4,11 +4,13 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopUp : MonoBehaviour
 {
     public Mission Mission;
     private string FileContent;
+    public Text MissionNameText;
 
     // Start is called before the first frame update
     private void Start()
@@ -17,19 +19,23 @@ public class PopUp : MonoBehaviour
         {
             LoadGameStory(Variables.NomJoueur);
         }
+
+        if (MissionNameText == null)
+        {
+            MissionNameText = GameObject.Find("TextCurrentMission").GetComponent<Text>();
+        }
     }
 
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
         Mission FirstMission = Variables.MissionList.Find(mission => mission.Id == 0);
-
-        Debug.Log(FirstMission.Heure);
 
         foreach (Mission mission in Variables.MissionList)
         {
             if (Variables.CurrentMissionID == 0 && Variables.CurrentMinute == 0 && Variables.CurrentHeure == 0)
             {
+                Variables.CurrentMissionID = 0;
                 Variables.CurrentHeure = FirstMission.Heure;
                 Variables.CurrentMinute = FirstMission.Minute;
             }
@@ -39,7 +45,9 @@ public class PopUp : MonoBehaviour
                 Mission = mission;
             }
         }
-        Debug.Log(Mission.Id);
+
+        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+       Debug.Log(Mission.Id);
     }
 
     private void LoadGameStory(string PlayerName)

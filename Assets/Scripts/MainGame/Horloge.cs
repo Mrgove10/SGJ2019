@@ -33,7 +33,7 @@ public class Horloge : MonoBehaviour
         }
         horlogue = Variables.CurrentHeure + ":" + minutetxt;
         horloguetext.text = horlogue;
-        Debug.Log("Horloge var time " + Variables.CurrentHeure + ": " + Variables.CurrentMinute);
+        //Debug.Log("Horloge var time " + Variables.CurrentHeure + ": " + Variables.CurrentMinute);
     }
 
     private IEnumerator ajout()
