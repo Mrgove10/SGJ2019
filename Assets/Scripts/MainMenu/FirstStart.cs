@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿//using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,9 +26,9 @@ public class FirstStart : MonoBehaviour
   ]
 }";
 
-        Account account = JsonConvert.DeserializeObject<Account>(json);
+      //  Account account = JsonConvert.DeserializeObject<Account>(json);
 
-         Debug.Log(account.Email);
+      //   Debug.Log(account.Email);
     }
 
     // Update is called once per frame
