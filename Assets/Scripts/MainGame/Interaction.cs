@@ -2,9 +2,8 @@
 
 public class Interaction : MonoBehaviour
 {
-    public Collider PlayerCollider;
-
     public GameObject InteractionText;
+    public GameObject OtherObject;
 
     // Start is called before the first frame update
     private void Start()
@@ -19,21 +18,76 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        if (OtherObject != null)
+        {
+            if (OtherObject.name == "Door")
+            {
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Door");
+                }
+            }
+
+            if (OtherObject.name == "Computeur")
+            {
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Door");
+                }
+            }
+
+            if (OtherObject.name == "Toilet")
+            {
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Door");
+                }
+            }
+
+            if (OtherObject.name == "Balance")
+            {
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Door");
+                }
+            }
+
+            if (OtherObject.name == "Pharmacie")
+            {
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Door");
+                }
+            }
+
+            if (OtherObject.name == "Frige")
+            {
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Door");
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entered");
+        OtherObject = other.gameObject;
         if (other.tag == "Interactable")
         {
-            Debug.Log("you can interact whit me");
             InteractionText.SetActive(true);
+            Debug.Log("you can interact whit me");
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("entered");
         if (other.tag == "Interactable")
         {
             Debug.Log("you can interact whit me");
@@ -42,7 +96,7 @@ public class Interaction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("exit");
+        OtherObject = null;
         InteractionText.SetActive(false);
     }
 }
