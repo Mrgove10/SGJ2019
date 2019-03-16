@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.45136726, g: 0.5009298, b: 0.57270443, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,6 +179,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4087980432909609279, guid: efa1cf659f9f8cb4db642ae719f174f7,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087980432909609279, guid: efa1cf659f9f8cb4db642ae719f174f7,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efa1cf659f9f8cb4db642ae719f174f7, type: 3}
 --- !u!1 &65891371
@@ -192,6 +202,7 @@ GameObject:
   - component: {fileID: 65891374}
   - component: {fileID: 65891373}
   - component: {fileID: 65891372}
+  - component: {fileID: 65891375}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -231,7 +242,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 55
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -256,13 +267,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65891371}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: 0.9396927, z: -0.3420201, w: 0}
+  m_LocalPosition: {x: -3.26, y: 5.5, z: 7.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 180, z: 0}
+--- !u!114 &65891375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65891371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1c3efa8e4c1cb4f86d2a3316cd131e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 288388573}
 --- !u!1 &213351530
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +356,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 30.602001, y: -391.397, z: 114.352005}
+--- !u!1 &288388573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4087980431633861361, guid: efa1cf659f9f8cb4db642ae719f174f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 40935090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1061944818
 GameObject:
   m_ObjectHideFlags: 0
