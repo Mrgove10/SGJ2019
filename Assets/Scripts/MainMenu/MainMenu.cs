@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
@@ -76,15 +77,20 @@ public class MainMenu : MonoBehaviour
 
     private void LoadGameStory(string PlayerName)
     {
-        // FileContent = File.ReadAllText("Story.json");
-        FileContent = Json.text;
-        FileContent = FileContent.Replace("{pseudo}", PlayerName);
-        Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
+        // Path.Combine combines strings into a file path
+        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
+        string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
 
-        /*  Debug.Log(FileContent);
-          foreach (var pp in PlayerName)
-          {
-              //Debug.Log(pp.Text);
-          }*/
+        if (File.Exists(filePath))
+        {
+            // Read the json from the file into a string
+            FileContent = File.ReadAllText(filePath);
+            FileContent = FileContent.Replace("{pseudo}", PlayerName);
+            Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
+        }
+        else
+        {
+            Debug.LogError("Cannot load game data!");
+        }
     }
 }

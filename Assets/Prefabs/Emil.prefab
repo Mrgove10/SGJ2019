@@ -1286,7 +1286,31 @@ MonoBehaviour:
   ChoiceWindow: {fileID: 0}
   YesButton: {fileID: 0}
   NoButton: {fileID: 0}
-  ChoiceText: {fileID: 0}
+  ChoiceTitle: {fileID: 0}
+  ChoiceParagraph: {fileID: 0}
+  Audiosource: {fileID: 0}
+  Mission:
+    Id: 0
+    Title: 
+    ObjetName: 
+    Text: 
+    Heure: 0
+    Minute: 0
+    ChoixOui:
+      choix: 0
+      SanteBonus: 0
+      SanteMalus: 0
+      ViePrivBonus: 0
+      ViePrivMalus: 0
+      Text: 
+    ChoixNon:
+      choix: 0
+      SanteBonus: 0
+      SanteMalus: 0
+      ViePrivBonus: 0
+      ViePrivMalus: 0
+      Text: 
+  MissionNameText: {fileID: 0}
 --- !u!114 &1257380592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1331,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6c2fd45413089984f965d37e859c4972, type: 3}
     - {fileID: 8300000, guid: 3c8d32c2df40f494488283734af0d0a1, type: 3}
     - {fileID: 8300000, guid: e27894f63c4e05d4db51da4fe880fe09, type: 3}
-    volume: 0.14
+    volume: 0.3
   - name: computer
     audioClips:
     - {fileID: 8300000, guid: bceebc05301924a4eb4fa799f90c7658, type: 3}
