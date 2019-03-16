@@ -1,0 +1,27 @@
+{
+    "listEvents": [{
+            "Id": 0,
+            "Title": null,
+            "ObjetName": null,
+            "Text": null,
+            "Heure": 0,
+            "Minute": 0,
+            "ChoixOui": {
+                "choix": 1,
+                "SanteBonus": 0,
+                "SanteMalus": 0,
+                "ViePrivBonus": 0,
+                "ViePrivMalus": 0,
+                "Text": null
+            },
+            "ChoixNon": {
+                "choix": 0,
+                "SanteBonus": 0,
+                "SanteMalus": 0,
+                "ViePrivBonus": 0,
+                "ViePrivMalus": 0,
+                "Text": null
+            }
+        }
+    ]
+}

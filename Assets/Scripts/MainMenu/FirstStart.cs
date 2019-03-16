@@ -1,35 +1,19 @@
-﻿//using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Assets.Scripts.MainGame.Class;
+using Newtonsoft.Json;
 using UnityEngine;
-
-public class Account
-{
-    public string Email { get; set; }
-    public bool Active { get; set; }
-    public DateTime CreatedDate { get; set; }
-    public IList<string> Roles { get; set; }
-}
 
 public class FirstStart : MonoBehaviour
 {
+    JsonSerializer Js = new JsonSerializer();
     // Start is called before the first frame update
     private void Start()
     {
-        string json = @"{
-          'Email': 'james@example.com',
-          'Active': true,
-          'CreatedDate': '2013-01-20T00:00:00Z',
-          'Roles': [
-            'User',
-            'Admin'
-          ]
-        }"
-            ;
-
-        //  Account account = JsonConvert.DeserializeObject<Account>(json);
-
-        //   Debug.Log(account.Email);
+        var l = new Choix();
+        var m = JsonConvert.SerializeObject(l);
+        Debug.Log(m);
     }
 
     // Update is called once per frame

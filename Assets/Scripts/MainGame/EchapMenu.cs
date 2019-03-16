@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -43,7 +44,6 @@ public class EchapMenu : MonoBehaviour
                 if (IsEscapeMenuPossible == true)
                 {
                     MenuActive = true;
-
                     EscapeMenu.SetActive(true);
                 }
             }
