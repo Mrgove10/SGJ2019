@@ -220,7 +220,7 @@
         "Id": 9,
         "Title": "Dodo",
         "ObjetName": "Bed",
-        "Text": "Votre lit connecté a enregistré des données sur l’heure que vous vous couchez.  Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
+        "Text": "Votre lit connecté a enregistré des données sur l’heure que vous vous couchez. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
         "Heure": 22,
         "Minute": 30,
         "ChoixOui": {
