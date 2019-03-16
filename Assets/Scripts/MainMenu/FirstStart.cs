@@ -7,13 +7,18 @@ using UnityEngine;
 
 public class FirstStart : MonoBehaviour
 {
-    JsonSerializer Js = new JsonSerializer();
+    private string FileContent;
     // Start is called before the first frame update
     private void Start()
     {
-        var l = new Choix();
-        var m = JsonConvert.SerializeObject(l);
-        Debug.Log(m);
+        FileContent = File.ReadAllText("Assets/Scripts/Story.json");
+       var p = JsonConvert.DeserializeObject<List<Mission>>(FileContent, new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All });
+
+      Debug.Log(FileContent);
+      foreach (var pp in p)
+      {
+          Debug.Log(pp.Text);
+      }
     }
 
     // Update is called once per frame

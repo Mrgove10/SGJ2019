@@ -1,18 +1,27 @@
-﻿namespace Assets.Scripts.MainGame.Class
+﻿using Newtonsoft.Json;
+using System;
+
+namespace Assets.Scripts.MainGame.Class
 {
+    [Serializable]
     public class Choix
     {
-        public choix choix;
-        public int SanteBonus;
-        public int SanteMalus;
-        public int ViePrivBonus;
-        public int ViePrivMalus;
-        public string Text;
-    }
+        [JsonProperty("choix")]
+        public int choix;
 
-    public enum choix
-    {
-        oui,
-        non
+        [JsonProperty("SanteBonus")]
+        public int SanteBonus;
+
+        [JsonProperty("SanteMalus")]
+        public int SanteMalus;
+
+        [JsonProperty("ViePrivBonus")]
+        public int ViePrivBonus;
+
+        [JsonProperty("ViePrivMalus")]
+        public int ViePrivMalus;
+
+        [JsonProperty("Text")]
+        public string Text;
     }
 }
