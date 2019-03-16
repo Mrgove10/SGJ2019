@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
@@ -15,14 +16,9 @@ public class LoadingScreen : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
-
     private void OnNextButtonClicked()
     {
         Debug.Log("Next Button clicked");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Appartement");
+        SceneManager.LoadSceneAsync("Appartement");
     }
 }
