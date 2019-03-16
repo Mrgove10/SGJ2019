@@ -20,7 +20,7 @@ public class Interaction : MonoBehaviour
     {
         if (Audiosource == null)
         {
-            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>()
+            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>();
         }
         if (YesButton == null)
         {
@@ -47,7 +47,6 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-
         if (OtherObject != null)
         {
             if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
@@ -65,7 +64,6 @@ public class Interaction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         OtherObject = other.gameObject;
-        Debug.Log("collideee");
         if (other.tag == "Interactable")
         {
             //InteractionText.SetActive(true);
@@ -89,24 +87,30 @@ public class Interaction : MonoBehaviour
 
     private void YesButtonClicked()
     {
-        ChoiceWindow.SetActive(false);
         Choix m = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixOui;
-        Variables.CurrentMissionID++;
         Variables.JaugeSante = Variables.JaugeSante + m.SanteBonus;
         Variables.JaugeSante = Variables.JaugeSante - m.SanteMalus;
         Variables.JaugeViePriv = Variables.JaugeViePriv + m.ViePrivBonus;
         Variables.JaugeViePriv = Variables.JaugeViePriv - m.ViePrivMalus;
+        AfterConfirmation();
     }
 
     private void NoButtonClicked()
     {
-        ChoiceWindow.SetActive(false);
         Choix m = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixNon;
-        Variables.CurrentMissionID++;
         Variables.JaugeSante = Variables.JaugeSante + m.SanteBonus;
         Variables.JaugeSante = Variables.JaugeSante - m.SanteMalus;
         Variables.JaugeViePriv = Variables.JaugeViePriv + m.ViePrivBonus;
         Variables.JaugeViePriv = Variables.JaugeViePriv - m.ViePrivMalus;
+        AfterConfirmation();
+    }
+
+    private void AfterConfirmation()
+    {
+        Variables.CurrentMissionID++;
+        ChoiceWindow.SetActive(false);
+
+        //TODO :  fondu au noir ici
     }
 
     private void Showpopup()
