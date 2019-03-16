@@ -56,12 +56,13 @@ public class Interaction : MonoBehaviour
                     Showpopup();
                 }
             }
-        }
+        }   
     }
 
     private void OnTriggerEnter(Collider other)
     {
         OtherObject = other.gameObject;
+        Debug.Log("collideee");
         if (other.tag == "Interactable")
         {
             //InteractionText.SetActive(true);
