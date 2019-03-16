@@ -1163,7 +1163,7 @@ GameObject:
   - component: {fileID: 4087980432909609274}
   - component: {fileID: 4087980432909609277}
   - component: {fileID: 6261652490947553666}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Emil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1231,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.40349782
+  m_Radius: 0.3
   m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.875, z: 0}
@@ -1343,7 +1343,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 751728df6a420854e9390a9ca09392f5, type: 2}
-  - {fileID: 2100000, guid: 0dab2e40d9ec2f64ea8deee4249b5b91, type: 2}
+  - {fileID: 2100000, guid: daf1ddb235c980e4c9e94d6aaf69c069, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
