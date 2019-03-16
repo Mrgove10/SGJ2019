@@ -2,8 +2,11 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 #if UNITY_EDITOR
+
 using UnityEditor;
+
 #endif
 
 namespace UnityStandardAssets.Utility
@@ -19,7 +22,6 @@ namespace UnityStandardAssets.Utility
             Call,
         }
 
-
         [Serializable]
         public class Entry
         {
@@ -28,17 +30,14 @@ namespace UnityStandardAssets.Utility
             public float delay;
         }
 
-
         [Serializable]
         public class Entries
         {
             public Entry[] entries;
         }
-        
-        
+
         public Entries entries = new Entries();
 
-        
         private void Awake()
         {
             foreach (Entry entry in entries.entries)
@@ -48,9 +47,11 @@ namespace UnityStandardAssets.Utility
                     case Action.Activate:
                         StartCoroutine(Activate(entry));
                         break;
+
                     case Action.Deactivate:
                         StartCoroutine(Deactivate(entry));
                         break;
+
                     case Action.Destroy:
                         Destroy(entry.target, entry.delay);
                         break;
@@ -62,20 +63,17 @@ namespace UnityStandardAssets.Utility
             }
         }
 
-
         private IEnumerator Activate(Entry entry)
         {
             yield return new WaitForSeconds(entry.delay);
             entry.target.SetActive(true);
         }
 
-
         private IEnumerator Deactivate(Entry entry)
         {
             yield return new WaitForSeconds(entry.delay);
             entry.target.SetActive(false);
         }
-
 
         private IEnumerator ReloadLevel(Entry entry)
         {
@@ -85,16 +83,15 @@ namespace UnityStandardAssets.Utility
     }
 }
 
-
 namespace UnityStandardAssets.Utility.Inspector
 {
 #if UNITY_EDITOR
-    [CustomPropertyDrawer(typeof (TimedObjectActivator.Entries))]
+
+    [CustomPropertyDrawer(typeof(TimedObjectActivator.Entries))]
     public class EntriesDrawer : PropertyDrawer
     {
         private const float k_LineHeight = 18;
         private const float k_Spacing = 4;
-
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
@@ -115,10 +112,10 @@ namespace UnityStandardAssets.Utility.Inspector
 
             if (entries.arraySize > 0)
             {
-                float actionWidth = .25f*width;
-                float targetWidth = .6f*width;
-                float delayWidth = .1f*width;
-                float buttonWidth = .05f*width;
+                float actionWidth = .25f * width;
+                float targetWidth = .6f * width;
+                float delayWidth = .1f * width;
+                float buttonWidth = .05f * width;
 
                 for (int i = 0; i < entries.arraySize; ++i)
                 {
@@ -144,7 +141,7 @@ namespace UnityStandardAssets.Utility.Inspector
                     // Draw fields - passs GUIContent.none to each so they are drawn without labels
 
                     if (entry.FindPropertyRelative("action").enumValueIndex !=
-                        (int) TimedObjectActivator.Action.ReloadLevel)
+                        (int)TimedObjectActivator.Action.ReloadLevel)
                     {
                         EditorGUI.PropertyField(actionRect, entry.FindPropertyRelative("action"), GUIContent.none);
                         EditorGUI.PropertyField(targetRect, entry.FindPropertyRelative("target"), GUIContent.none);
@@ -163,7 +160,7 @@ namespace UnityStandardAssets.Utility.Inspector
                     }
                 }
             }
-            
+
             // add & sort buttons
             y += k_LineHeight + k_Spacing;
 
@@ -195,22 +192,20 @@ namespace UnityStandardAssets.Utility.Inspector
                 }
             }
 
-
             // Set indent back to what it was
             EditorGUI.indentLevel = indent;
             //
 
-
             EditorGUI.EndProperty();
         }
-
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             SerializedProperty entries = property.FindPropertyRelative("entries");
             float lineAndSpace = k_LineHeight + k_Spacing;
-            return 40 + (entries.arraySize*lineAndSpace) + lineAndSpace;
+            return 40 + (entries.arraySize * lineAndSpace) + lineAndSpace;
         }
     }
+
 #endif
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,15 +5,14 @@ namespace UnityStandardAssets.Utility
 {
     public class DragRigidbody : MonoBehaviour
     {
-        const float k_Spring = 50.0f;
-        const float k_Damper = 5.0f;
-        const float k_Drag = 10.0f;
-        const float k_AngularDrag = 5.0f;
-        const float k_Distance = 0.2f;
-        const bool k_AttachToCenterOfMass = false;
+        private const float k_Spring = 50.0f;
+        private const float k_Damper = 5.0f;
+        private const float k_Drag = 10.0f;
+        private const float k_AngularDrag = 5.0f;
+        private const float k_Distance = 0.2f;
+        private const bool k_AttachToCenterOfMass = false;
 
         private SpringJoint m_SpringJoint;
-
 
         private void Update()
         {
@@ -60,7 +58,6 @@ namespace UnityStandardAssets.Utility
             StartCoroutine("DragObject", hit.distance);
         }
 
-
         private IEnumerator DragObject(float distance)
         {
             var oldDrag = m_SpringJoint.connectedBody.drag;
@@ -81,7 +78,6 @@ namespace UnityStandardAssets.Utility
                 m_SpringJoint.connectedBody = null;
             }
         }
-
 
         private Camera FindCamera()
         {

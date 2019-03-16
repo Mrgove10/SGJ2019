@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,12 +22,10 @@ namespace UnityStandardAssets.Utility
             Rigidbody = GetComponent<Rigidbody>();
         }
 
-
         public void DelayedReset(float delay)
         {
             StartCoroutine(ResetCoroutine(delay));
         }
-
 
         public IEnumerator ResetCoroutine(float delay)
         {

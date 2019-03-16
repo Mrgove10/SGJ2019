@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace UnityStandardAssets.Utility
@@ -39,6 +38,7 @@ namespace UnityStandardAssets.Utility
 
         // these are public, readable by other objects - i.e. for an AI to know where to head!
         public WaypointCircuit.RoutePoint targetPoint { get; private set; }
+
         public WaypointCircuit.RoutePoint speedPoint { get; private set; }
         public WaypointCircuit.RoutePoint progressPoint { get; private set; }
 
@@ -66,7 +66,6 @@ namespace UnityStandardAssets.Utility
             Reset();
         }
 
-
         // reset the object to sensible values
         public void Reset()
         {
@@ -79,7 +78,6 @@ namespace UnityStandardAssets.Utility
             }
         }
 
-
         private void Update()
         {
             if (progressStyle == ProgressStyle.SmoothAlongRoute)
@@ -89,24 +87,23 @@ namespace UnityStandardAssets.Utility
                 // we use lerp as a simple way of smoothing out the speed over time.
                 if (Time.deltaTime > 0)
                 {
-                    speed = Mathf.Lerp(speed, (lastPosition - transform.position).magnitude/Time.deltaTime,
+                    speed = Mathf.Lerp(speed, (lastPosition - transform.position).magnitude / Time.deltaTime,
                                        Time.deltaTime);
                 }
                 target.position =
-                    circuit.GetRoutePoint(progressDistance + lookAheadForTargetOffset + lookAheadForTargetFactor*speed)
+                    circuit.GetRoutePoint(progressDistance + lookAheadForTargetOffset + lookAheadForTargetFactor * speed)
                            .position;
                 target.rotation =
                     Quaternion.LookRotation(
-                        circuit.GetRoutePoint(progressDistance + lookAheadForSpeedOffset + lookAheadForSpeedFactor*speed)
+                        circuit.GetRoutePoint(progressDistance + lookAheadForSpeedOffset + lookAheadForSpeedFactor * speed)
                                .direction);
-
 
                 // get our current progress along the route
                 progressPoint = circuit.GetRoutePoint(progressDistance);
                 Vector3 progressDelta = progressPoint.position - transform.position;
                 if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
                 {
-                    progressDistance += progressDelta.magnitude*0.5f;
+                    progressDistance += progressDelta.magnitude * 0.5f;
                 }
 
                 lastPosition = transform.position;
@@ -118,9 +115,8 @@ namespace UnityStandardAssets.Utility
                 Vector3 targetDelta = target.position - transform.position;
                 if (targetDelta.magnitude < pointToPointThreshold)
                 {
-                    progressNum = (progressNum + 1)%circuit.Waypoints.Length;
+                    progressNum = (progressNum + 1) % circuit.Waypoints.Length;
                 }
-
 
                 target.position = circuit.Waypoints[progressNum].position;
                 target.rotation = circuit.Waypoints[progressNum].rotation;
@@ -135,7 +131,6 @@ namespace UnityStandardAssets.Utility
                 lastPosition = transform.position;
             }
         }
-
 
         private void OnDrawGizmos()
         {
