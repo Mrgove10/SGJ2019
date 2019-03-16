@@ -15,9 +15,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - IgnoreRender
+  - Interactable
+  - Player
   - 
   - 
   - 
