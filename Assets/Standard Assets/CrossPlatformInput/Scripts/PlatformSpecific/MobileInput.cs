@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
@@ -11,13 +10,11 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             CrossPlatformInputManager.RegisterVirtualButton(new CrossPlatformInputManager.VirtualButton(name));
         }
 
-
         private void AddAxes(string name)
         {
             // we have not registered this button yet so add it, happens in the constructor
             CrossPlatformInputManager.RegisterVirtualAxis(new CrossPlatformInputManager.VirtualAxis(name));
         }
-
 
         public override float GetAxis(string name, bool raw)
         {
@@ -28,7 +25,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             return m_VirtualAxes[name].GetValue;
         }
 
-
         public override void SetButtonDown(string name)
         {
             if (!m_VirtualButtons.ContainsKey(name))
@@ -37,7 +33,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             }
             m_VirtualButtons[name].Pressed();
         }
-
 
         public override void SetButtonUp(string name)
         {
@@ -48,7 +43,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             m_VirtualButtons[name].Released();
         }
 
-
         public override void SetAxisPositive(string name)
         {
             if (!m_VirtualAxes.ContainsKey(name))
@@ -57,7 +51,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             }
             m_VirtualAxes[name].Update(1f);
         }
-
 
         public override void SetAxisNegative(string name)
         {
@@ -68,7 +61,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             m_VirtualAxes[name].Update(-1f);
         }
 
-
         public override void SetAxisZero(string name)
         {
             if (!m_VirtualAxes.ContainsKey(name))
@@ -78,7 +70,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             m_VirtualAxes[name].Update(0f);
         }
 
-
         public override void SetAxis(string name, float value)
         {
             if (!m_VirtualAxes.ContainsKey(name))
@@ -87,7 +78,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             }
             m_VirtualAxes[name].Update(value);
         }
-
 
         public override bool GetButtonDown(string name)
         {
@@ -100,7 +90,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             return m_VirtualButtons[name].GetButtonDown;
         }
 
-
         public override bool GetButtonUp(string name)
         {
             if (m_VirtualButtons.ContainsKey(name))
@@ -112,7 +101,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             return m_VirtualButtons[name].GetButtonUp;
         }
 
-
         public override bool GetButton(string name)
         {
             if (m_VirtualButtons.ContainsKey(name))
@@ -123,7 +111,6 @@ namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
             AddButton(name);
             return m_VirtualButtons[name].GetButton;
         }
-
 
         public override Vector3 MousePosition()
         {

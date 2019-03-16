@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -16,7 +15,6 @@ namespace UnityStandardAssets.Utility
 
         private float m_MaxLifetime;
         private bool m_EarlyStop;
-
 
         private IEnumerator Start()
         {
@@ -51,7 +49,6 @@ namespace UnityStandardAssets.Utility
 
             Destroy(gameObject);
         }
-
 
         public void Stop()
         {

@@ -23,7 +23,6 @@ namespace UnityStandardAssets.Cameras
         private RaycastHit[] m_Hits;              // the hits between the camera and the target
         private RayHitComparer m_RayHitComparer;  // variable to compare raycast hit distances
 
-
         private void Start()
         {
             // find the camera in the object hierarchy
@@ -36,13 +35,12 @@ namespace UnityStandardAssets.Cameras
             m_RayHitComparer = new RayHitComparer();
         }
 
-
         private void LateUpdate()
         {
             // initially set the target distance
             float targetDist = m_OriginalDist;
 
-            m_Ray.origin = m_Pivot.position + m_Pivot.forward*sphereCastRadius;
+            m_Ray.origin = m_Pivot.position + m_Pivot.forward * sphereCastRadius;
             m_Ray.direction = -m_Pivot.forward;
 
             // initial check to see if start of spherecast intersects anything
@@ -65,7 +63,7 @@ namespace UnityStandardAssets.Cameras
             // if there is a collision
             if (initialIntersect)
             {
-                m_Ray.origin += m_Pivot.forward*sphereCastRadius;
+                m_Ray.origin += m_Pivot.forward * sphereCastRadius;
 
                 // do a raycast and gather all the intersections
                 m_Hits = Physics.RaycastAll(m_Ray, m_OriginalDist - sphereCastRadius);
@@ -100,7 +98,7 @@ namespace UnityStandardAssets.Cameras
             // visualise the cam clip effect in the editor
             if (hitSomething)
             {
-                Debug.DrawRay(m_Ray.origin, -m_Pivot.forward*(targetDist + sphereCastRadius), Color.red);
+                Debug.DrawRay(m_Ray.origin, -m_Pivot.forward * (targetDist + sphereCastRadius), Color.red);
             }
 
             // hit something so move the camera to a better position
@@ -108,16 +106,15 @@ namespace UnityStandardAssets.Cameras
             m_CurrentDist = Mathf.SmoothDamp(m_CurrentDist, targetDist, ref m_MoveVelocity,
                                            m_CurrentDist > targetDist ? clipMoveTime : returnTime);
             m_CurrentDist = Mathf.Clamp(m_CurrentDist, closestDistance, m_OriginalDist);
-            m_Cam.localPosition = -Vector3.forward*m_CurrentDist;
+            m_Cam.localPosition = -Vector3.forward * m_CurrentDist;
         }
-
 
         // comparer for check distances in ray cast hits
         public class RayHitComparer : IComparer
         {
             public int Compare(object x, object y)
             {
-                return ((RaycastHit) x).distance.CompareTo(((RaycastHit) y).distance);
+                return ((RaycastHit)x).distance.CompareTo(((RaycastHit)y).distance);
             }
         }
     }

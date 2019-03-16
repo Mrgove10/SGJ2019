@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-
 
 namespace UnityStandardAssets.Cameras
 {
@@ -30,23 +28,20 @@ namespace UnityStandardAssets.Cameras
             m_Cam = GetComponentInChildren<Camera>();
         }
 
-
         protected override void FollowTarget(float deltaTime)
         {
             // calculate the correct field of view to fit the bounds size at the current distance
             float dist = (m_Target.position - transform.position).magnitude;
-            float requiredFOV = Mathf.Atan2(m_BoundSize, dist)*Mathf.Rad2Deg*m_ZoomAmountMultiplier;
+            float requiredFOV = Mathf.Atan2(m_BoundSize, dist) * Mathf.Rad2Deg * m_ZoomAmountMultiplier;
 
             m_Cam.fieldOfView = Mathf.SmoothDamp(m_Cam.fieldOfView, requiredFOV, ref m_FovAdjustVelocity, m_FovAdjustTime);
         }
-
 
         public override void SetTarget(Transform newTransform)
         {
             base.SetTarget(newTransform);
             m_BoundSize = MaxBoundsExtent(newTransform, m_IncludeEffectsInSize);
         }
-
 
         public static float MaxBoundsExtent(Transform obj, bool includeEffects)
         {

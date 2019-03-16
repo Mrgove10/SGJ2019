@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BasicInteractableObject : InteractableObject
 {
-
     public MeshRenderer[] meshRenderers;
     public Color canInteractColor = Color.green;
-
 
     public override void SetInteractable(bool canInteract)
     {
@@ -16,7 +12,7 @@ public class BasicInteractableObject : InteractableObject
             if (canInteract)
             {
                 renderer.material.SetColor("_EmissionColor", canInteractColor);
-                foreach ( Material mat in renderer.materials)
+                foreach (Material mat in renderer.materials)
                 {
                     mat.SetColor("_EmissionColor", canInteractColor);
                 }
@@ -31,7 +27,6 @@ public class BasicInteractableObject : InteractableObject
             }
         }
     }
-
 
     public override void Interact()
     {

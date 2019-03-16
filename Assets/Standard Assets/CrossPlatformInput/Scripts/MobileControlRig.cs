@@ -1,9 +1,10 @@
-using System;
 #if UNITY_EDITOR
-using UnityEditor;
-#endif
-using UnityEngine;
 
+using UnityEditor;
+
+#endif
+
+using UnityEngine;
 
 namespace UnityStandardAssets.CrossPlatformInput
 {
@@ -19,13 +20,13 @@ namespace UnityStandardAssets.CrossPlatformInput
         // This define is set or unset by a menu item that is included with
         // the Cross Platform Input package.
 
-
 #if !UNITY_EDITOR
 	void OnEnable()
 	{
 		CheckEnableControlRig();
 	}
 #else
+
         public int callbackOrder
         {
             get
@@ -33,6 +34,7 @@ namespace UnityStandardAssets.CrossPlatformInput
                 return 1;
             }
         }
+
 #endif
 
         private void Start()
@@ -60,19 +62,17 @@ namespace UnityStandardAssets.CrossPlatformInput
             EditorApplication.update += Update;
         }
 
-
         private void OnDisable()
         {
             EditorApplication.update -= Update;
         }
 
-
         private void Update()
         {
             CheckEnableControlRig();
         }
-#endif
 
+#endif
 
         private void CheckEnableControlRig()
         {
@@ -83,7 +83,6 @@ namespace UnityStandardAssets.CrossPlatformInput
 #endif
         }
 
-
         private void EnableControlRig(bool enabled)
         {
             foreach (Transform t in transform)
@@ -93,10 +92,12 @@ namespace UnityStandardAssets.CrossPlatformInput
         }
 
 #if UNITY_EDITOR
+
         public void OnActiveBuildTargetChanged(BuildTarget previousTarget, BuildTarget newTarget)
         {
             CheckEnableControlRig();
         }
+
 #endif
     }
 }
