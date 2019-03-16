@@ -4,9 +4,16 @@ public class Interaction : MonoBehaviour
 {
     public Collider PlayerCollider;
 
+    public GameObject InteractionText;
+
     // Start is called before the first frame update
     private void Start()
     {
+        if (InteractionText == null)
+        {
+            InteractionText = GameObject.Find("TextInteract");
+            InteractionText.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -20,6 +27,7 @@ public class Interaction : MonoBehaviour
         if (other.tag == "Interactable")
         {
             Debug.Log("you can interact whit me");
+            InteractionText.SetActive(true);
         }
     }
 
@@ -35,5 +43,6 @@ public class Interaction : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("exit");
+        InteractionText.SetActive(false);
     }
 }
