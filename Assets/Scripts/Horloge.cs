@@ -22,7 +22,16 @@ public class Horloge : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        horlogue = heure + ":" + minute;
+        string minutetxt;
+        if (minute <= 9)
+        {
+            minutetxt = "0" + minute;
+        }
+        else
+        {
+            minutetxt = minute.ToString();
+        }
+        horlogue = heure + ":" + minutetxt;
         horloguetext.text = (horlogue);
     }
 
