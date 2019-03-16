@@ -20,7 +20,7 @@ public class Interaction : MonoBehaviour
     {
         if (Audiosource == null)
         {
-            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>()
+            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>();
         }
         if (YesButton == null)
         {
