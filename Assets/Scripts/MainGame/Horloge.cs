@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using    Assets.Scripts;
+
 public class Horloge : MonoBehaviour
 {
     public int heure = 0;
