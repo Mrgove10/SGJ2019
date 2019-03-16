@@ -41,7 +41,7 @@ public class Horloge : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             minute++;
-            Debug.Log(horlogue);
+            // Debug.Log(horlogue);
         }
     }
 }
