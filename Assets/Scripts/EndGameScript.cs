@@ -16,8 +16,9 @@ public class EndGameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /* POUR LE DEBUG UNIQUEMENT
         Variables.JaugeSante = 60;
-        Variables.JaugeViePriv = 40;
+        Variables.JaugeViePriv = 40;*/
 
         if (Texte == null)
         {
