@@ -18,7 +18,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 20,
-            "ViePrivBonus": 20,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -42,7 +42,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 25,
-            "ViePrivBonus": 25,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -66,7 +66,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 15,
-            "ViePrivBonus": 15,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -90,7 +90,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 20,
-            "ViePrivBonus": 20,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -114,7 +114,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 25,
-            "ViePrivBonus": 25,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -138,7 +138,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 25,
-            "ViePrivBonus": 25,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -163,7 +163,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 20,
-            "ViePrivBonus": 20,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -187,7 +187,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 25,
-            "ViePrivBonus": 25,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -211,7 +211,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 20,
-            "ViePrivBonus": 20,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
@@ -235,7 +235,7 @@
             "choix": 0,
             "SanteBonus": 0,
             "SanteMalus": 15,
-            "ViePrivBonus": 15,
+            "ViePrivBonus": 0,
             "ViePrivMalus": 0,
             "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
