@@ -1,28 +1,35 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Horloge : MonoBehaviour{
+public class Horloge : MonoBehaviour
+{
     public int heure = 0;
-
     public int minute = 0;
     public string horlogue = "";
     public Text horloguetext;
 
     // Start is called before the first frame update
-    private void Start(){
+    private void Start()
+    {
         StartCoroutine(ajout());
+        if (horloguetext == null)
+        {
+            horloguetext = GameObject.Find("Horloge").GetComponent<Text>();
+        }
     }
 
     // Update is called once per frame
-    private void FixedUpdate(){
+    private void FixedUpdate()
+    {
         horlogue = heure + ":" + minute;
         horloguetext.text = (horlogue);
     }
 
-    private IEnumerator ajout(){
-        while (true){
+    private IEnumerator ajout()
+    {
+        while (true)
+        {
             yield return new WaitForSeconds(1);
             minute++;
             Debug.Log(horlogue);
