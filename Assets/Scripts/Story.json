@@ -23,7 +23,31 @@
           }
       },
       {
-          "Id": 0,
+          "Id": 1,
+          "Title": "Peseer",
+          "ObjetName": "Balance",
+          "Text": "Votre balance connectée a enregistré votre poids. Selon votre IMC, vous êtes en surpoids. Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous l’envoyer ces données ?",
+          "Heure": 7,
+          "Minute": 10,
+          "ChoixOui": {
+              "choix": 1,
+              "SanteBonus": 25,
+              "SanteMalus": 0,
+              "ViePrivBonus": 0,
+              "ViePrivMalus": 25,
+              "Text": "Vous êtes en surpoids. Maigrir vous ferait du bien. Prenez un petit déjeuner à <350 calories et faites au moins 30 minutes d'exercice aujourd’hui."
+          },
+          "ChoixNon": {
+              "choix": 0,
+              "SanteBonus": 0,
+              "SanteMalus": 25,
+              "ViePrivBonus": 25,
+              "ViePrivMalus": 0,
+              "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+          }
+      },
+      {
+          "Id": 2,
           "Title": "Peseer",
           "ObjetName": "Balance",
           "Text": "Votre balance connectée a enregistré votre poids. Selon votre IMC, vous êtes en surpoids. Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous l’envoyer ces données ?",
@@ -46,4 +70,5 @@
               "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
           }
       }
+
   ]

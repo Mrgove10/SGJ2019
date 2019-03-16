@@ -13,6 +13,7 @@ public class Horloge : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+       
         StartCoroutine(ajout());
         if (horloguetext == null)
         {
@@ -33,18 +34,18 @@ public class Horloge : MonoBehaviour
             minutetxt = minute.ToString();
         }
         horlogue = heure + ":" + minutetxt;
-        horloguetext.text = (horlogue);
-        Varriables.CurrentHeure = heure;
-        Varriables.CurrentMinute = minute;
+        horloguetext.text = horlogue;
+        Variables.CurrentHeure = heure;
+        Variables.CurrentMinute = minute;
+        Debug.Log("Horloge var time " + Variables.CurrentHeure + ": " + Variables.CurrentMinute);
     }
 
     private IEnumerator ajout()
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2f);
             minute++;
-            // Debug.Log(horlogue);
         }
     }
 }
