@@ -1017,85 +1017,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135, type: 3}
---- !u!1 &1360902493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1360902494}
-  - component: {fileID: 1360902496}
-  - component: {fileID: 1360902495}
-  m_Layer: 5
-  m_Name: Text (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1360902494
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360902493}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1570818420}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 215.80002, y: -50.7}
-  m_SizeDelta: {x: 66.9, y: 15.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1360902495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360902493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 2e739296c01a1c04a8a521fb3d67e159, type: 3}
-    m_FontSize: 12
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Vie Priv\xE9"
---- !u!222 &1360902496
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360902493}
-  m_CullTransparentMesh: 0
 --- !u!1 &1443942778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,12 +1165,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!224 &1570818420 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7139127030267466328, guid: a3f97edb1e60e11498c4a80f7f7f4599,
-    type: 3}
-  m_PrefabInstance: {fileID: 7139127031458238138}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1601929658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,110 +1280,6 @@ MonoBehaviour:
       ViePrivMalus: 0
       Text: 
   MissionNameText: {fileID: 0}
---- !u!1 &1786495857
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1786495858}
-  - component: {fileID: 1786495861}
-  - component: {fileID: 1786495860}
-  - component: {fileID: 1786495859}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1786495858
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786495857}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1570818420}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 215.8, y: -26.900024}
-  m_SizeDelta: {x: 66.9, y: 15.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!132 &1786495859
-GUIText:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786495857}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 2e739296c01a1c04a8a521fb3d67e159, type: 3}
-  m_Material: {fileID: 0}
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!114 &1786495860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786495857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 2e739296c01a1c04a8a521fb3d67e159, type: 3}
-    m_FontSize: 12
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Sant\xE9\n"
---- !u!222 &1786495861
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786495857}
-  m_CullTransparentMesh: 0
 --- !u!21 &1801979853
 Material:
   serializedVersion: 6
@@ -2005,6 +1816,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 147.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7139127031977617831, guid: a3f97edb1e60e11498c4a80f7f7f4599,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7139127031977617828, guid: a3f97edb1e60e11498c4a80f7f7f4599,
         type: 3}
       propertyPath: m_FontData.m_Font
@@ -2021,19 +1837,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1888520097, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 135.8
+      value: 135.80005
       objectReference: {fileID: 0}
     - target: {fileID: 1888520097, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -56.2
+      value: -56.19995
       objectReference: {fileID: 0}
     - target: {fileID: 1786495858, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1360902494, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360902494, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 215.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360902494, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.69995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360902493, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
+      propertyPath: m_Name
+      value: TextVIePriv
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786495857, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
+      propertyPath: m_Name
+      value: "TextSant\xE9"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
