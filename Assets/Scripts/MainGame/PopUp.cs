@@ -63,14 +63,22 @@ public class PopUp : MonoBehaviour
 
     private void LoadGameStory(string PlayerName)
     {
-        FileContent = File.ReadAllText("Assets/Scripts/Story.json");
-        FileContent = FileContent.Replace("{pseudo}", PlayerName);
-        Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
 
-       // Debug.Log(FileContent);
-        foreach (var pp in PlayerName)
+        // Path.Combine combines strings into a file path
+        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
+        string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
+
+        if (File.Exists(filePath))
         {
-            //Debug.Log(pp.Text);
+            // Read the json from the file into a string
+            FileContent = File.ReadAllText(filePath);
+            FileContent = FileContent.Replace("{pseudo}", PlayerName);
+            Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
         }
+        else
+        {
+            Debug.LogError("Cannot load game data!");
+        }
+
     }
 }
