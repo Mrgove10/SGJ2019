@@ -59,7 +59,7 @@ public class PopUp : MonoBehaviour
         FileContent = FileContent.Replace("{pseudo}", PlayerName);
         Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
 
-        Debug.Log(FileContent);
+       // Debug.Log(FileContent);
         foreach (var pp in PlayerName)
         {
             //Debug.Log(pp.Text);
