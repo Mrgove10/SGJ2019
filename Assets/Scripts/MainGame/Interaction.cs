@@ -26,37 +26,34 @@ public class Interaction : MonoBehaviour
             NoButton = GameObject.Find("NoButton").GetComponent<Button>();
             NoButton.onClick.AddListener(NoButtonClicked);
         }
-        if (ChoiceWindow == null)
-        {
-            ChoiceWindow = GameObject.Find("ChoiceWindow");
-            ChoiceWindow.SetActive(false);
-        }
-
         if (InteractionText == null)
         {
             InteractionText = GameObject.Find("TextInteract");
             InteractionText.SetActive(false);
+        }
+        if (ChoiceWindow == null)
+        {
+            ChoiceWindow = GameObject.Find("ChoiceWindow");
+            ChoiceWindow.SetActive(false);
         }
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
+
         if (OtherObject != null)
         {
             if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
             {
                 InteractionText.SetActive(true);
-                Renderer rend = OtherObject.GetComponent<Renderer>();
-                rend.material.shader = Shader.Find("_Color");
-                rend.material.SetColor("_Color", Color.green);
                 Debug.Log("I am a door");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Showpopup();
                 }
             }
-        }   
+        }
     }
 
     private void OnTriggerEnter(Collider other)

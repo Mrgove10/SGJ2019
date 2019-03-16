@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Notifications : MonoBehaviour
 {
-    public List<Notif> ListNotif;
-
-    public GameObject NotifUI;
 
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
+        MyNotifications.CallNotification("test", 3);
+        CreateNoti("Patron2merde", "Salut ! Je veux juste te dire que ta maladie c'est de la merde !", 3);
     }
+
+    public void CreateNoti(string titre, string desc, float duree)
+    {
+        MyNotifications.CallNotification(titre + "\n" + desc, duree);
+     
+    }
+
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        foreach (Notif notif in ListNotif)
-        {
-            if (notif.heure == Variables.CurrentHeure && notif.minute == Variables.CurrentMinute)
-            {
-                Debug.Log("vouvou");
-            }
-        }
+       
     }
 }

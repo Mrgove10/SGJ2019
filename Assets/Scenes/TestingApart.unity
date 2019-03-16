@@ -181,76 +181,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efa1cf659f9f8cb4db642ae719f174f7, type: 3}
---- !u!23 &487889083 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229689032518139595, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1067163799 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229689032518139589, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1075348143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8229689032515874813, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1075348145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075348143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9af37ed534569a48bfe065d05b82e35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canInteract: 0
-  meshRenderers:
-  - {fileID: 487889083}
-  - {fileID: 1155498646}
-  - {fileID: 1256027007}
-  - {fileID: 1874298966}
-  - {fileID: 1322890804}
-  - {fileID: 1067163799}
-  canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
---- !u!65 &1075348146
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075348143}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.0052834, y: 2.2192926, z: 1.9140093}
-  m_Center: {x: -0.6790924, y: 0.6096463, z: 0.45700467}
---- !u!23 &1155498646 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229689032518139597, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1256027007 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229689032518139599, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1322890804 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229689032518139587, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!21 &1546355767
 Material:
   serializedVersion: 6
@@ -276,12 +206,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors: []
---- !u!23 &1874298966 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229689032518139585, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-    type: 3}
-  m_PrefabInstance: {fileID: 5411815532554593084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!21 &2030914849
 Material:
   serializedVersion: 6
@@ -452,11 +376,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8229689032515874813, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b00f4c2cb2f6e748a7951e8aaf1b135, type: 3}
