@@ -46,6 +46,7 @@ public class Interaction : MonoBehaviour
         {
             if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
             {
+                InteractionText.SetActive(true);
                 Renderer rend = OtherObject.GetComponent<Renderer>();
                 rend.material.shader = Shader.Find("_Color");
                 rend.material.SetColor("_Color", Color.green);
@@ -53,7 +54,6 @@ public class Interaction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Showpopup();
-                    InteractionText.SetActive(true);
                 }
             }
         }
