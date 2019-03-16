@@ -28,7 +28,7 @@ public class FirstStart : MonoBehaviour
 
       //  Account account = JsonConvert.DeserializeObject<Account>(json);
 
-     //   Debug.Log(account.Email);
+      //   Debug.Log(account.Email);
     }
 
     // Update is called once per frame
