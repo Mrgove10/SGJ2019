@@ -22,20 +22,24 @@ public class PopUp : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-       Mission FirstMission = Variables.MissionList.Find(mission => mission.Id == 0);
+        Mission FirstMission = Variables.MissionList.Find(mission => mission.Id == 0);
 
-        Variables.CurrentHeure = FirstMission.Heure;
-        Variables.CurrentMinute = FirstMission.Minute;
         Debug.Log(FirstMission.Heure);
+
         foreach (Mission mission in Variables.MissionList)
         {
+            if (Variables.CurrentMissionID == 0 && Variables.CurrentMinute == 0 && Variables.CurrentHeure == 0)
+            {
+                Variables.CurrentHeure = FirstMission.Heure;
+                Variables.CurrentMinute = FirstMission.Minute;
+            }
             if (mission.Heure == Variables.CurrentHeure && mission.Minute == Variables.CurrentMinute)
             {
                 Variables.CurrentMissionID = mission.Id;
                 Mission = mission;
             }
         }
-        Debug.Log(Mission.Id);  
+        Debug.Log(Mission.Id);
     }
 
     private void LoadGameStory(string PlayerName)

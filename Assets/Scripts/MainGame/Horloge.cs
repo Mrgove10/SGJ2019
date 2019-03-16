@@ -5,15 +5,13 @@ using UnityEngine.UI;
 
 public class Horloge : MonoBehaviour
 {
-    public int heure = 0;
-    public int minute = 0;
     public string horlogue = "";
     public Text horloguetext;
+    public bool starthorloge = false;
 
     // Start is called before the first frame update
     private void Start()
     {
-       
         StartCoroutine(ajout());
         if (horloguetext == null)
         {
@@ -25,18 +23,16 @@ public class Horloge : MonoBehaviour
     private void FixedUpdate()
     {
         string minutetxt;
-        if (minute <= 9)
+        if (Variables.CurrentMinute <= 9)
         {
-            minutetxt = "0" + minute;
+            minutetxt = "0" + Variables.CurrentMinute;
         }
         else
         {
-            minutetxt = minute.ToString();
+            minutetxt = Variables.CurrentMinute.ToString();
         }
-        horlogue = heure + ":" + minutetxt;
+        horlogue = Variables.CurrentHeure + ":" + minutetxt;
         horloguetext.text = horlogue;
-        Variables.CurrentHeure = heure;
-        Variables.CurrentMinute = minute;
         Debug.Log("Horloge var time " + Variables.CurrentHeure + ": " + Variables.CurrentMinute);
     }
 
@@ -45,7 +41,15 @@ public class Horloge : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(2f);
-            minute++;
+            if (Variables.CurrentMinute <= 60)
+            {
+                Variables.CurrentMinute++;
+            }
+            else
+            {
+                Variables.CurrentHeure++;
+                Variables.CurrentMinute = 0;
+            }
         }
     }
 }
