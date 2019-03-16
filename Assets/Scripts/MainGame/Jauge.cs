@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Jauge : MonoBehaviour
@@ -7,14 +9,17 @@ public class Jauge : MonoBehaviour
     public Slider jaugeViePriv;
 
     [Range(0, 100)]
-    public int Sante = 50;
+    public int Sante;
 
-    [Range(0, 100)]
-    public int ViePriv = 100;
+    [Range(0, 200)]
+    public int ViePriv;
 
     // Start is called before the first frame update
     private void Start()
     {
+        Sante = Variables.JaugeSante;
+        ViePriv = Variables.JaugeViePriv;
+
         if (jaugeSante == null)
         {
             jaugeSante = GameObject.Find("SliderSante").GetComponent<Slider>();
@@ -31,7 +36,7 @@ public class Jauge : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        jaugeSante.value = Sante;
-        jaugeViePriv.value = ViePriv;
+        Variables.JaugeSante = (int)jaugeSante.value;
+        Variables.JaugeViePriv =  (int)jaugeViePriv.value;
     }
 }

@@ -7,7 +7,6 @@ public class Horloge : MonoBehaviour
 {
     public string horlogue = "";
     public Text horloguetext;
-    public bool starthorloge = false;
 
     // Start is called before the first frame update
     private void Start()

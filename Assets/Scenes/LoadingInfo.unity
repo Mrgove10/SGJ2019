@@ -236,8 +236,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: e565eab4e582e794990dcd25935dca0f, type: 3}
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -248,9 +248,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque error fugiat
-    minima quasi quas distinctio quod reiciendis id voluptatem accusamus? Quam corrupti
-    deleniti ipsum. Hic beatae minima debitis consequatur tempore.
+  m_Text: "Votre m\xE9decin vous diagnostique une maladie chronique.\r\n\nAfin d\u2019\xE9viter
+    les complications graves de la sant\xE9, vous devez g\xE9rer plusieurs aspects
+    de votre vie. Vous devez manger sainement, faire de l'exercice r\xE9guli\xE8rement,
+    g\xE9rer le stress et bien dormir.\r\n\nVotre m\xE9decin vous propose d'utiliser
+    d\u2019appareils num\xE9riques pour recueillir des donn\xE9es sur votre comportement
+    et sur votre physiologie. Si vous choisissez de lui envoyer ces donn\xE9es, il
+    vous enviera des conseils personnalis\xE9es pour vous aider \xE0 faire des choix
+    plus sains et \xE0 rester en bonne sant\xE9.\r\n\nVotre assurance maladie priv\xE9e
+    peut acc\xE9der aux donn\xE9es envoy\xE9es \xE0 votre m\xE9decin. Selon votre
+    mode de vie, ils peuvent augmenter ou diminuer vos co\xFBts d'assurance. Chaque
+    fois que vos co\xFBts d'assurance changent, votre employeur est inform\xE9 de
+    la modification de leurs cotisations.\r\n\nChoisissez si vous voulez partager
+    vos donn\xE9es personnelles avec votre m\xE9decin afin d'obtenir des conseils
+    utiles, mais n'oubliez pas de prot\xE9ger votre vie priv\xE9e. \r\n"
 --- !u!222 &244852942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -477,7 +488,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -489,7 +500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Continuer
 --- !u!222 &321949192
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -535,7 +546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.1499939, y: 50}
+  m_AnchoredPosition: {x: 0.1499939, y: 33}
   m_SizeDelta: {x: 230, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322237861

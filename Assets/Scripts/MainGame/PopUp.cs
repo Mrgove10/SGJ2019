@@ -12,9 +12,12 @@ public class PopUp : MonoBehaviour
     private string FileContent;
     public Text MissionNameText;
 
+    
+
     // Start is called before the first frame update
     private void Start()
     {
+
         if (Variables.MissionList == null || Variables.MissionList.Count == 0)
         {
             LoadGameStory(Variables.NomJoueur);
@@ -47,7 +50,7 @@ public class PopUp : MonoBehaviour
         }
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
-       Debug.Log(Mission.Id);
+        Debug.Log(Mission.Id);
     }
 
     private void LoadGameStory(string PlayerName)

@@ -1232,7 +1232,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.40349782
-  m_Height: 1.75
+  m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.875, z: 0}
 --- !u!114 &4087980432909609274
@@ -1279,8 +1279,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435b3880442c1d745ae429f231772a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCollider: {fileID: 0}
   InteractionText: {fileID: 0}
+  OtherObject: {fileID: 0}
+  ChoiceWindow: {fileID: 0}
+  YesButton: {fileID: 0}
+  NoButton: {fileID: 0}
+  ChoiceText: {fileID: 0}
 --- !u!1 &4087980431633861363
 GameObject:
   m_ObjectHideFlags: 0

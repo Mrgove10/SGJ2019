@@ -1,74 +1,243 @@
-  [{
-          "Id": 0,
-          "Title": "Reveille",
-          "ObjetName": "Lit",
-          "Text": "Votre lit connecté a enregistré des données sur la durée et la qualité de votre sommeil. Ces données peuvent aider votre médecin à vous donner le feedback personnalisé sur votre sommeil.  Voulez-vous l’envoyer ces données ?",
-          "Heure": 7,
-          "Minute": 0,
-          "ChoixOui": {
-              "choix": 1,
-              "SanteBonus": 20,
-              "SanteMalus": 0,
-              "ViePrivBonus": 0,
-              "ViePrivMalus": 20,
-              "Text": "Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !"
-          },
-          "ChoixNon": {
-              "choix": 0,
-              "SanteBonus": 0,
-              "SanteMalus": 20,
-              "ViePrivBonus": 20,
-              "ViePrivMalus": 0,
-              "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
-          }
-      },
-      {
-          "Id": 1,
-          "Title": "Peseer",
-          "ObjetName": "Balance",
-          "Text": "Votre balance connectée a enregistré votre poids. Selon votre IMC, vous êtes en surpoids. Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous l’envoyer ces données ?",
-          "Heure": 7,
-          "Minute": 10,
-          "ChoixOui": {
-              "choix": 1,
-              "SanteBonus": 25,
-              "SanteMalus": 0,
-              "ViePrivBonus": 0,
-              "ViePrivMalus": 25,
-              "Text": "Vous êtes en surpoids. Maigrir vous ferait du bien. Prenez un petit déjeuner à <350 calories et faites au moins 30 minutes d'exercice aujourd’hui."
-          },
-          "ChoixNon": {
-              "choix": 0,
-              "SanteBonus": 0,
-              "SanteMalus": 25,
-              "ViePrivBonus": 25,
-              "ViePrivMalus": 0,
-              "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
-          }
-      },
-      {
-          "Id": 2,
-          "Title": "Peseer",
-          "ObjetName": "Balance",
-          "Text": "Votre balance connectée a enregistré votre poids. Selon votre IMC, vous êtes en surpoids. Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous l’envoyer ces données ?",
-          "Heure": 7,
-          "Minute": 10,
-          "ChoixOui": {
-              "choix": 1,
-              "SanteBonus": 25,
-              "SanteMalus": 0,
-              "ViePrivBonus": 0,
-              "ViePrivMalus": 25,
-              "Text": "Vous êtes en surpoids. Maigrir vous ferait du bien. Prenez un petit déjeuner à <350 calories et faites au moins 30 minutes d'exercice aujourd’hui."
-          },
-          "ChoixNon": {
-              "choix": 0,
-              "SanteBonus": 0,
-              "SanteMalus": 25,
-              "ViePrivBonus": 25,
-              "ViePrivMalus": 0,
-              "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
-          }
-      }
+[
+    {
+        "Id": 0,
+        "Title": "Reveil",
+        "ObjetName": "Bed",
+        "Text": "Votre lit connecté a enregistré des données sur la durée et la qualité de votre sommeil. Ces données peuvent aider votre médecin à vous donner le feedback personnalisé sur votre sommeil.  Voulez-vous les envoyer ?",
+        "Heure": 7,
+        "Minute": 0,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 20,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 20,
+            "Text": "Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !"
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 20,
+            "ViePrivBonus": 20,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 1,
+        "Title": "Peseer",
+        "ObjetName": "Balance",
+        "Text": "Votre balance connectée a enregistré votre poids. Selon votre IMC, vous êtes en surpoids. Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous les envoyer ?",
+        "Heure": 7,
+        "Minute": 10,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 25,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 25,
+            "Text": "Vous êtes en surpoids. Maigrir vous ferait du bien. Prenez un petit déjeuner à <350 calories et faites au moins 30 minutes d'exercice aujourd’hui."
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 25,
+            "ViePrivBonus": 25,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 2,
+        "Title": "PetitDej",
+        "ObjetName": "Fridge",
+        "Text": "Votre frigo connecté enregistre que vous mangez des œufs pour le petit déjeuner (550 calories). Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous l’envoyer ces données ?",
+        "Heure": 7,
+        "Minute": 20,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 15,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 15,
+            "Text": "Vous avez consommez 550 calories pour le petit déjeuner. Assurez-vous de ne pas dépasser 900 calories au déjeuner. N'oubliez pas de faire au moins 30 minutes d'exercice aujourd'hui !"
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 15,
+            "ViePrivBonus": 15,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 3,
+        "Title": "Boulot",
+        "ObjetName": "Computeur",
+        "Text": "La montre intelligente que vous portez capte votre niveau de stress en fonction de la variabilité de votre fréquence cardiaque. Vous semblez plus stressé que d'habitude. Ces données peuvent aider votre medecin à vous donner des conseils personnalisés pour mieux gerer votre stress. Voulez-vous les envoyer ?",
+        "Heure": 9,
+        "Minute": 0,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 20,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 20,
+            "Text": "Votre niveau de stress est élevé, {pseudo}. Cela peut affecter votre santé physique et mentale. Je vous recommande au moins 10 minutes de méditation."
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 20,
+            "ViePrivBonus": 20,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 4,
+        "Title": "DejMidi",
+        "ObjetName": "Frigo",
+        "Text": "Votre frigo connecté enregistre que vous mangez une demi-pizza et un petit cupcake pour le déjeuner (1350 calories). Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous les envoyer ?",
+        "Heure": 12,
+        "Minute": 30,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 25,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 25,
+            "Text": "Vous avez dépassé des calories recommandées. Assurez-vous de ne pas dépasser 300 calories au dîner. N'oubliez pas de faire au moins 40 minutes d'exercice aujourd'hui ! "
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 25,
+            "ViePrivBonus": 25,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 5,
+        "Title": "Medoc",
+        "ObjetName": "Pharmacie",
+        "Text": "Votre boîte à pilules connectée enregistre que vous avez oublié de prendre vos médicaments à l'heure. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
+        "Heure": 13,
+        "Minute": 0,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 25,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 25,
+            "Text": "Prendre vos médicaments à l'heure tous les jours est important pour votre traitement, {pseudo}. Je vais mettre un rappel sur votre smartphone pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 25,
+            "ViePrivBonus": 25,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
 
-  ]
+        "Id": 6,
+        "Title": "Besoin",
+        "ObjetName": "Toilet",
+        "Text": "Vos toilettes connecté sont équipées de capteurs qui recueillent des informations sur votre microbiote. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
+        "Heure": 14,
+        "Minute": 0,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 20,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 20,
+            "Text": "Vous avez brûlé 290 calories {pseudo}. C'est génial ! Attention, ne dépassez pas de 350 calories pour dîner !"
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 20,
+            "ViePrivBonus": 20,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 7,
+        "Title": "Sport",
+        "ObjetName": "Door",
+        "Text": "Vous êtes sur le point d'aller courir. Votre montre intelligente capte votre temps d’exercice et les calories brûlées. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
+        "Heure": 16,
+        "Minute": 30,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 25,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 25,
+            "Text": "Prendre vos médicaments à l'heure tous les jours est important pour votre traitement, {pseudo}. Je vais mettre un rappel sur votre smartphone pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 25,
+            "ViePrivBonus": 25,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 8,
+        "Title": "Dinner",
+        "ObjetName": "Fridge",
+        "Text": "Votre frigo connecté enregistre que vous mangez une salade au saumon pour le dîner (400 calories). Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
+        "Heure": 19,
+        "Minute": 30,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 20,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 20,
+            "Text": "Vous avez dépassé des calories recommandées, {pseudo}. Pour votre prochain repas, remplissez la moitié de votre assiette de légumes."
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 20,
+            "ViePrivBonus": 20,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    },
+    {
+        "Id": 9,
+        "Title": "Dodo",
+        "ObjetName": "Bed",
+        "Text": "Votre lit connecté a enregistré des données sur l’heure que vous vous couchez. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
+        "Heure": 22,
+        "Minute": 30,
+        "ChoixOui": {
+            "choix": 1,
+            "SanteBonus": 15,
+            "SanteMalus": 0,
+            "ViePrivBonus": 0,
+            "ViePrivMalus": 15,
+            "Text": "D'après de vos données, l'heure idéale à vous réveiller demain est à 7:00 du matin."
+        },
+        "ChoixNon": {
+            "choix": 0,
+            "SanteBonus": 0,
+            "SanteMalus": 15,
+            "ViePrivBonus": 15,
+            "ViePrivMalus": 0,
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+        }
+    }
+]
