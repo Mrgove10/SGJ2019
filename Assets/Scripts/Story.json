@@ -2,7 +2,7 @@
     {
         "Id": 0,
         "Title": "Reveil",
-        "ObjetName": "Bed",
+        "ObjetName": "bed",
         "Text": "Votre lit connecté a enregistré des données sur la durée et la qualité de votre sommeil. Ces données peuvent aider votre médecin à vous donner le feedback personnalisé sur votre sommeil.  Voulez-vous les envoyer ?",
         "Heure": 7,
         "Minute": 0,
@@ -26,7 +26,7 @@
     {
         "Id": 1,
         "Title": "Peseer",
-        "ObjetName": "Balance",
+        "ObjetName": "Scale",
         "Text": "Votre balance connectée a enregistré votre poids. Selon votre IMC, vous êtes en surpoids. Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous les envoyer ?",
         "Heure": 7,
         "Minute": 10,
@@ -50,7 +50,7 @@
     {
         "Id": 2,
         "Title": "PetitDej",
-        "ObjetName": "Fridge",
+        "ObjetName": "fridge",
         "Text": "Votre frigo connecté enregistre que vous mangez des œufs pour le petit déjeuner (550 calories). Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous l’envoyer ces données ?",
         "Heure": 7,
         "Minute": 20,
@@ -74,7 +74,7 @@
     {
         "Id": 3,
         "Title": "Boulot",
-        "ObjetName": "Computeur",
+        "ObjetName": "desk",
         "Text": "La montre intelligente que vous portez capte votre niveau de stress en fonction de la variabilité de votre fréquence cardiaque. Vous semblez plus stressé que d'habitude. Ces données peuvent aider votre medecin à vous donner des conseils personnalisés pour mieux gerer votre stress. Voulez-vous les envoyer ?",
         "Heure": 9,
         "Minute": 0,
@@ -98,7 +98,7 @@
     {
         "Id": 4,
         "Title": "DejMidi",
-        "ObjetName": "Frigo",
+        "ObjetName": "fridge",
         "Text": "Votre frigo connecté enregistre que vous mangez une demi-pizza et un petit cupcake pour le déjeuner (1350 calories). Ces données peuvent aider votre médecin à vous proposer des conseils de nutrition et d’exercice personnalisés. Voulez-vous les envoyer ?",
         "Heure": 12,
         "Minute": 30,
@@ -122,7 +122,7 @@
     {
         "Id": 5,
         "Title": "Medoc",
-        "ObjetName": "Pharmacie",
+        "ObjetName": "pharmacy",
         "Text": "Votre boîte à pilules connectée enregistre que vous avez oublié de prendre vos médicaments à l'heure. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
         "Heure": 13,
         "Minute": 0,
@@ -147,7 +147,7 @@
 
         "Id": 6,
         "Title": "Besoin",
-        "ObjetName": "Toilet",
+        "ObjetName": "WC",
         "Text": "Vos toilettes connecté sont équipées de capteurs qui recueillent des informations sur votre microbiote. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
         "Heure": 14,
         "Minute": 0,
@@ -171,7 +171,7 @@
     {
         "Id": 7,
         "Title": "Sport",
-        "ObjetName": "Door",
+        "ObjetName": "door",
         "Text": "Vous êtes sur le point d'aller courir. Votre montre intelligente capte votre temps d’exercice et les calories brûlées. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
         "Heure": 16,
         "Minute": 30,
@@ -195,7 +195,7 @@
     {
         "Id": 8,
         "Title": "Dinner",
-        "ObjetName": "Fridge",
+        "ObjetName": "fridge",
         "Text": "Votre frigo connecté enregistre que vous mangez une salade au saumon pour le dîner (400 calories). Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
         "Heure": 19,
         "Minute": 30,
@@ -219,7 +219,7 @@
     {
         "Id": 9,
         "Title": "Dodo",
-        "ObjetName": "Bed",
+        "ObjetName": "bed",
         "Text": "Votre lit connecté a enregistré des données sur l’heure que vous vous couchez. Ces données peuvent aider votre médecin à vous proposer des conseils personnalisés pour améliorer votre adhésion au traitement. Voulez-vous les envoyer",
         "Heure": 22,
         "Minute": 30,

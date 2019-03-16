@@ -42,11 +42,19 @@ public class PopUp : MonoBehaviour
                 Variables.CurrentHeure = FirstMission.Heure;
                 Variables.CurrentMinute = FirstMission.Minute;
             }
+
+            if (mission.Id == Variables.CurrentMissionID)
+            {
+                Variables.CurrentHeure = mission.Heure;
+                Variables.CurrentMinute = mission.Minute;
+            }
+            /*
             if (mission.Heure == Variables.CurrentHeure && mission.Minute == Variables.CurrentMinute)
             {
                 Variables.CurrentMissionID = mission.Id;
                 Mission = mission;
-            }
+            }*/
+
         }
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;

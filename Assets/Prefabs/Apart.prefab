@@ -10306,7 +10306,7 @@ GameObject:
   - component: {fileID: 3845831558512703852}
   - component: {fileID: 8229689032515874204}
   m_Layer: 10
-  m_Name: scale
+  m_Name: Scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18335,7 +18335,7 @@ GameObject:
   - component: {fileID: 1075348146}
   - component: {fileID: 1075348145}
   m_Layer: 10
-  m_Name: fridge:GEO
+  m_Name: fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
