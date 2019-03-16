@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+using    Assets.Scripts;
 public class Horloge : MonoBehaviour
 {
     public int heure = 0;
@@ -33,6 +33,8 @@ public class Horloge : MonoBehaviour
         }
         horlogue = heure + ":" + minutetxt;
         horloguetext.text = (horlogue);
+        Varriables.CurrentHeure = heure;
+        Varriables.CurrentMinute = minute;
     }
 
     private IEnumerator ajout()
