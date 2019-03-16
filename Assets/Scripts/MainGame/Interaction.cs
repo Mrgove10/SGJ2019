@@ -1,5 +1,8 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.MainGame.Class;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +14,27 @@ public class Interaction : MonoBehaviour
     public GameObject ChoiceWindow;
     public Button YesButton;
     public Button NoButton;
-    public Text ChoiceText;
+    public Text ChoiceTitle;
+    public Text ChoiceParagraph;
 
     public AudioSource Audiosource;
+
+    public Mission Mission;
+    private string FileContent;
+    public Text MissionNameText;
 
     // Start is called before the first frame update
     private void Start()
     {
-        if (Audiosource == null)
+        #region popup
+
+        if (ChoiceTitle == null)
         {
-            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>();
+            ChoiceTitle = GameObject.Find("ChoiceTitle").GetComponent<Text>();
+        }
+        if (ChoiceParagraph == null)
+        {
+            ChoiceParagraph = GameObject.Find("ChoiceParagraph").GetComponent<Text>();
         }
         if (YesButton == null)
         {
@@ -32,16 +46,45 @@ public class Interaction : MonoBehaviour
             NoButton = GameObject.Find("NoButton").GetComponent<Button>();
             NoButton.onClick.AddListener(NoButtonClicked);
         }
-        if (InteractionText == null)
-        {
-            InteractionText = GameObject.Find("TextInteract");
-            InteractionText.SetActive(false);
-        }
         if (ChoiceWindow == null)
         {
             ChoiceWindow = GameObject.Find("ChoiceWindow");
             ChoiceWindow.SetActive(false);
         }
+
+        #endregion popup
+
+        #region misions
+
+        if (Variables.MissionList == null || Variables.MissionList.Count == 0)
+        {
+            LoadGameStory(Variables.NomJoueur);
+        }
+        if (MissionNameText == null)
+        {
+            MissionNameText = GameObject.Find("TextCurrentMission").GetComponent<Text>();
+        }
+
+        #endregion misions
+
+        #region Audio
+
+        if (Audiosource == null)
+        {
+            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>();
+        }
+
+        #endregion Audio
+
+        #region interation E
+
+        if (InteractionText == null)
+        {
+            InteractionText = GameObject.Find("TextInteract");
+            InteractionText.SetActive(false);
+        }
+
+        #endregion interation E
     }
 
     // Update is called once per frame
@@ -59,6 +102,28 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
+        Mission FirstMission = Variables.MissionList.Find(mission => mission.Id == 0);
+
+        foreach (Mission mission in Variables.MissionList)
+        {
+            if (Variables.CurrentMissionID == 0 && Variables.CurrentMinute == 0 && Variables.CurrentHeure == 0)
+            {
+                Variables.CurrentMissionID = 0;
+                Variables.CurrentHeure = FirstMission.Heure;
+                Variables.CurrentMinute = FirstMission.Minute;
+            }
+
+            if (mission.Id == Variables.CurrentMissionID)
+            {
+                Variables.CurrentHeure = mission.Heure;
+                Variables.CurrentMinute = mission.Minute;
+            }
+        }
+
+        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+        Debug.Log(Mission.Id);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -115,7 +180,27 @@ public class Interaction : MonoBehaviour
 
     private void Showpopup()
     {
+        ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
+        ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
         ChoiceWindow.SetActive(true);
-        ChoiceText.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
+    }
+
+    private void LoadGameStory(string PlayerName)
+    {
+        // Path.Combine combines strings into a file path
+        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
+        string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
+
+        if (File.Exists(filePath))
+        {
+            // Read the json from the file into a string
+            FileContent = File.ReadAllText(filePath);
+            FileContent = FileContent.Replace("{pseudo}", PlayerName);
+            Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
+        }
+        else
+        {
+            Debug.LogError("Cannot load game data!");
+        }
     }
 }
