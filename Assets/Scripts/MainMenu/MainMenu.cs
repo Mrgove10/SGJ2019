@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -15,7 +15,8 @@ public class MainMenu : MonoBehaviour
     public Toggle ToggleF;
     public InputField InputNom;
     private string FileContent;
-
+    public TextAsset Json;  
+        
     private void Start()
     {
         if (PlayButton == null)
@@ -76,14 +77,15 @@ public class MainMenu : MonoBehaviour
 
     private void LoadGameStory(string PlayerName)
     {
-        FileContent = File.ReadAllText("Assets/Scripts/Story.json");
+        // FileContent = File.ReadAllText("Story.json");
+        FileContent = Json.text;
         FileContent = FileContent.Replace("{pseudo}", PlayerName);
         Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
 
-      /*  Debug.Log(FileContent);
-        foreach (var pp in PlayerName)
-        {
-            //Debug.Log(pp.Text);
-        }*/
+        /*  Debug.Log(FileContent);
+          foreach (var pp in PlayerName)
+          {
+              //Debug.Log(pp.Text);
+          }*/
     }
 }
