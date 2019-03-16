@@ -1307,7 +1307,35 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6c2fd45413089984f965d37e859c4972, type: 3}
     - {fileID: 8300000, guid: 3c8d32c2df40f494488283734af0d0a1, type: 3}
     - {fileID: 8300000, guid: e27894f63c4e05d4db51da4fe880fe09, type: 3}
-    volume: 0.2
+    volume: 0.14
+  - name: computer
+    audioClips:
+    - {fileID: 8300000, guid: bceebc05301924a4eb4fa799f90c7658, type: 3}
+    volume: 0.5
+  - name: cupboard
+    audioClips:
+    - {fileID: 8300000, guid: cfc4141cf45f7bc49bf96cd36181b956, type: 3}
+    volume: 0.5
+  - name: door
+    audioClips:
+    - {fileID: 8300000, guid: 7eb6ddbd96c905248b9a95328a5479f7, type: 3}
+    volume: 0.5
+  - name: fridge
+    audioClips:
+    - {fileID: 8300000, guid: 9aa0d0d75238fb14796d96841c85f84f, type: 3}
+    volume: 0.5
+  - name: scales
+    audioClips:
+    - {fileID: 8300000, guid: 51294351bfcfb46448b8ee2e5b874ad4, type: 3}
+    volume: 0.5
+  - name: sheet
+    audioClips:
+    - {fileID: 8300000, guid: 8f36659e29e4ff549a7fe2ef64ee1b48, type: 3}
+    volume: 0.5
+  - name: plop
+    audioClips:
+    - {fileID: 8300000, guid: fd5866391960702498478b24c6acc0ca, type: 3}
+    volume: 0.5
 --- !u!82 &5690261679388906776
 AudioSource:
   m_ObjectHideFlags: 0
