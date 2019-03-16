@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace UnityStandardAssets.Utility
@@ -12,7 +11,6 @@ namespace UnityStandardAssets.Utility
         private Vector3 m_OrigCameraPos;
         private bool m_Refocus;
 
-
         public CameraRefocus(Camera camera, Transform parent, Vector3 origCameraPos)
         {
             m_OrigCameraPos = origCameraPos;
@@ -20,18 +18,15 @@ namespace UnityStandardAssets.Utility
             Parent = parent;
         }
 
-
         public void ChangeCamera(Camera camera)
         {
             Camera = camera;
         }
 
-
         public void ChangeParent(Transform parent)
         {
             Parent = parent;
         }
-
 
         public void GetFocusPoint()
         {
@@ -45,7 +40,6 @@ namespace UnityStandardAssets.Utility
             }
             m_Refocus = false;
         }
-
 
         public void SetFocusPoint()
         {

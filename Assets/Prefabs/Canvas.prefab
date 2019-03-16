@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 1360902496}
   - component: {fileID: 1360902495}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: TextVIePriv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,7 +389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 215.80002, y: -50.7}
+  m_AnchoredPosition: {x: 215.80005, y: -50.69995}
   m_SizeDelta: {x: 66.9, y: 15.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1360902496
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 1786495860}
   - component: {fileID: 1786495859}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: "TextSant\xE9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +539,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7139127030267466328}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -642,11 +642,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7139127030267466328}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 135.8, y: -56.2}
+  m_AnchoredPosition: {x: 135.80005, y: -56.19995}
   m_SizeDelta: {x: 240.8, y: 81.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1888520099
@@ -836,7 +836,7 @@ RectTransform:
   - {fileID: 1079282002}
   - {fileID: 980692299}
   m_Father: {fileID: 7139127030267466328}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1038,12 +1038,12 @@ RectTransform:
   - {fileID: 7139127031173131455}
   - {fileID: 7139127030202370985}
   - {fileID: 7139127031676585381}
-  - {fileID: 7139127031977617831}
   - {fileID: 6873483578215911098}
   - {fileID: 5985359854754896527}
   - {fileID: 1989019086}
   - {fileID: 1888520097}
   - {fileID: 1786495858}
+  - {fileID: 7139127031977617831}
   - {fileID: 1360902494}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1824,7 +1824,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7139127030267466328}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1872,7 +1872,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'CurrentMission
+
+'
 --- !u!1 &7836427564230111309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,12 +1905,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7139127030267466328}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -134}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1373214131928869198
 CanvasRenderer:
@@ -1931,7 +1933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1940,10 +1942,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 15
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1951,7 +1953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Appuiyer sur E pour interagir
+  m_Text: "Appuyer sur la touche E pour int\xE9ragir"
 --- !u!1001 &6001096495443867089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2007,7 +2009,7 @@ PrefabInstance:
     - target: {fileID: 876980996997626731, guid: 800997e80be81794aa0a7ec117799943,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 876980996997626731, guid: 800997e80be81794aa0a7ec117799943,
         type: 3}

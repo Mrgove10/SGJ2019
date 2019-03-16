@@ -2,7 +2,6 @@
 using Assets.Scripts.MainGame.Class;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,8 +14,8 @@ public class MainMenu : MonoBehaviour
     public Toggle ToggleF;
     public InputField InputNom;
     private string FileContent;
-    public TextAsset Json;  
-        
+    public TextAsset Json;
+
     private void Start()
     {
         if (PlayButton == null)

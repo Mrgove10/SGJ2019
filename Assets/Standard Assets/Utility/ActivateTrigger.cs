@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -24,7 +23,6 @@ namespace UnityStandardAssets.Utility
         public int triggerCount = 1;
         public bool repeatTrigger = false;
 
-
         private void DoActivateTrigger()
         {
             triggerCount--;
@@ -47,6 +45,7 @@ namespace UnityStandardAssets.Utility
                             targetGameObject.BroadcastMessage("DoActivateTrigger");
                         }
                         break;
+
                     case Mode.Replace:
                         if (source != null)
                         {
@@ -58,24 +57,28 @@ namespace UnityStandardAssets.Utility
                             }
                         }
                         break;
+
                     case Mode.Activate:
                         if (targetGameObject != null)
                         {
                             targetGameObject.SetActive(true);
                         }
                         break;
+
                     case Mode.Enable:
                         if (targetBehaviour != null)
                         {
                             targetBehaviour.enabled = true;
                         }
                         break;
+
                     case Mode.Animate:
                         if (targetGameObject != null)
                         {
                             targetGameObject.GetComponent<Animation>().Play();
                         }
                         break;
+
                     case Mode.Deactivate:
                         if (targetGameObject != null)
                         {
@@ -85,7 +88,6 @@ namespace UnityStandardAssets.Utility
                 }
             }
         }
-
 
         private void OnTriggerEnter(Collider other)
         {

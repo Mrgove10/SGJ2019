@@ -1,16 +1,19 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-public class Test : MonoBehaviour {
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        StartCoroutine("moja");
+    }
 
-	void Awake(){
-		StartCoroutine("moja");
-	}
-	IEnumerator moja(){
-		yield return new WaitForSeconds(1);
-		
-		MyNotifications.CallNotification("Hello World!", 3);
-		MyNotifications.CallNotification("MyNotifications", 4);
-		MyNotifications.CallNotification("Goodbye World!", 3);
-	}
+    private IEnumerator moja()
+    {
+        yield return new WaitForSeconds(1);
+
+        MyNotifications.CallNotification("Hello World!", 3);
+        MyNotifications.CallNotification("MyNotifications", 4);
+        MyNotifications.CallNotification("Goodbye World!", 3);
+    }
 }

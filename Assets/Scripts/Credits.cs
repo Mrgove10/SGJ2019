@@ -1,8 +1,4 @@
-﻿using Assets.Scripts;
-using Assets.Scripts.MainGame.Class;
-using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
@@ -10,7 +6,7 @@ public class Credits : MonoBehaviour
     public Button Credit;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         if (Credit == null)
         {
@@ -20,9 +16,8 @@ public class Credits : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
     }
 
     private void OnCreditButtonClicked()

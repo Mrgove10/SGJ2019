@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -8,11 +6,9 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void SetInteractable(bool canInteract)
     {
-
     }
 
     public virtual void Interact()
     {
-
     }
 }
