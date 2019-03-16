@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.29999, y: -28.699997}
+  m_AnchoredPosition: {x: 64.29999, y: -70}
   m_SizeDelta: {x: 160, y: 179.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24150043
@@ -235,8 +235,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -206}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -86.2}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253728686
 MonoBehaviour:
@@ -314,7 +314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -170.5}
+  m_AnchoredPosition: {x: 0, y: -37.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &591293998
@@ -455,8 +455,8 @@ RectTransform:
   - {fileID: 1068603999}
   - {fileID: 2124275836}
   - {fileID: 24150042}
-  - {fileID: 952068718}
   - {fileID: 1468939426}
+  - {fileID: 952068718}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -580,11 +580,11 @@ RectTransform:
   m_Children:
   - {fileID: 1219073432}
   m_Father: {fileID: 686265072}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -13.784332, y: 111}
+  m_AnchoredPosition: {x: -13.784332, y: 26.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952068719
@@ -662,7 +662,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d717131cad22bbe4d9c9529228d7e3e5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -713,8 +713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -4.899994, y: -237.70001}
-  m_SizeDelta: {x: 300, y: 30}
+  m_AnchoredPosition: {x: -4.899994, y: -173}
+  m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068604000
 MonoBehaviour:
@@ -749,7 +749,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dans le cadre de la Scientific Game Jam 2019
+  m_Text: "Jeu r\xE9alis\xE9 lors de la cinqui\xE8me Scientific Game Jam de Grenoble,
+    organis\xE9e du 15 au 17 Mars 2019 par la Communaut\xE9 Universit\xE9 Grenoble
+    Alpes, en partenariat avec La Casemate (CCSTI) et avec le soutien financier de
+    l\u2019Idex Universit\xE9 Grenoble Alpes.  Cette ann\xE9e, l'\xE9v\xE9nement est
+    \xE9galement labellis\xE9 \"80 ans du CNRS\""
 --- !u!222 &1068604001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1007,11 +1011,11 @@ RectTransform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 686265072}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 196}
+  m_AnchoredPosition: {x: 0, y: 86.6}
   m_SizeDelta: {x: 969, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468939427
@@ -1152,7 +1156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75.100006, y: -29.699997}
+  m_AnchoredPosition: {x: -75.100006, y: -71}
   m_SizeDelta: {x: 160, y: 183.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124275837
