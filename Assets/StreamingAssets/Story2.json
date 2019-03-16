@@ -1,0 +1,55 @@
+    {
+        "Id": 0,
+        "Type": "Choice",
+        "Message": "Votre lit connecté a enregistré des données sur la durée et la qualité de votre sommeil. Ces données peuvent aider votre médecin à vous donner le feedback personnalisé sur votre sommeil.  Voulez-vous les envoyer ?",
+		"Transitions": [
+			{
+				"Choix": 0,
+				"Object" : "Oui"
+				"Sante": 10,
+				"ViePriv": -10,
+				"Heure": 7,
+				"Minute": 0,
+				"Message": "Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !"
+				"NextState" : 1
+			},
+			{
+				"Choix": 1,
+				"Object" : "Non"
+				"Sante": -15,
+				"ViePriv": 0,
+				"Heure": 7,
+				"Minute": 0,
+				"Message": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+				"NextState" : 2
+			},
+		]
+    },
+	    {
+        "Id": 1,
+        "Type": "Walking",
+        "Message": "",
+        "Journal": "",
+		"Transitions": [
+			{
+				"Choix": 0,
+				"Object" : "Oui"
+				"Sante": 10,
+				"ViePriv": -10,
+				"Heure": 7,
+				"Minute": 0,
+				"Message": "Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !"
+				"NextState" : 1
+			},
+			{
+				"Choix": 1,
+				"Object" : "Non"
+				"Sante": -15,
+				"ViePriv": 0,
+				"Heure": 7,
+				"Minute": 0,
+				"Message": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
+				"NextState" : 2
+			},
+		]
+    },
