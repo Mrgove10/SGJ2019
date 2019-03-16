@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class MainMenu : MonoBehaviour
         Variables.NomJoueur = InputNom.text;
         Debug.Log("Nom choisi par le joueur: " + Variables.NomJoueur);
         LoadGameStory(InputNom.text);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingInfo");
+        SceneManager.LoadSceneAsync("LoadingInfo");
     }
 
     private void OnQuitButtonClicked()
@@ -79,10 +80,10 @@ public class MainMenu : MonoBehaviour
         FileContent = FileContent.Replace("{pseudo}", PlayerName);
         Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
 
-        Debug.Log(FileContent);
+      /*  Debug.Log(FileContent);
         foreach (var pp in PlayerName)
         {
             //Debug.Log(pp.Text);
-        }
+        }*/
     }
 }

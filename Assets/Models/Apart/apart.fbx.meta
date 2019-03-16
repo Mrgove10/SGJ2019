@@ -2304,6 +2304,182 @@ ModelImporter:
     4300570: character_body
     4300572: character_hair
     4300574: character_watch
+    6400000: Book.000
+    6400002: Book.001
+    6400004: Book.002
+    6400006: Book.003
+    6400008: Book.004
+    6400010: Book.005
+    6400012: Book.006
+    6400014: Book.007
+    6400016: Book.008
+    6400018: Book.009
+    6400020: Book.010
+    6400022: Book.011
+    6400024: Book.012
+    6400026: Book.013
+    6400028: Book.014
+    6400030: Book.015
+    6400032: Book.016
+    6400034: Book.017
+    6400036: Book.018
+    6400038: Book.019
+    6400040: Book.020
+    6400042: Book.021
+    6400044: counter_sink.001
+    6400046: counter_sink.002
+    6400048: counter_sink.003
+    6400050: counter_sink10
+    6400052: counter_sink10.001
+    6400054: counter_sink11
+    6400056: counter_sink12
+    6400058: counter_sink13
+    6400060: counter_sink14
+    6400062: counter_sink16
+    6400064: counter_sink17
+    6400066: counter_sink18
+    6400068: counter_sink19
+    6400070: counter_sink2
+    6400072: counter_sink2.001
+    6400074: counter_sink20
+    6400076: counter_sink21
+    6400078: counter_sink22
+    6400080: counter_sink4
+    6400082: counter_sink4.001
+    6400084: counter_sink4.002
+    6400086: counter_sink4.003
+    6400088: counter_sink5
+    6400090: counter_sink5.001
+    6400092: counter_sink5.002
+    6400094: counter_sink5.003
+    6400096: counter_sink6
+    6400098: counter_sink6.001
+    6400100: counter_sink7
+    6400102: counter_sink8
+    6400104: counter_sink8.001
+    6400106: counter_sink9
+    6400108: counter_sink9.001
+    6400110: Cube
+    6400112: Cube.001
+    6400114: Cube.002
+    6400116: Cube.003
+    6400118: Cube.004
+    6400120: Cube.005
+    6400122: Cylinder
+    6400124: Cylinder.001
+    6400126: Cylinder.002
+    6400128: Cylinder.003
+    6400130: Cylinder.004
+    6400132: Cylinder.005
+    6400134: Cylinder.006
+    6400136: Cylinder.007
+    6400138: Cylinder.008
+    6400140: Cylinder.009
+    6400142: Cylinder.010
+    6400144: Cylinder.011
+    6400146: Cylinder.012
+    6400148: Cylinder.013
+    6400150: Cylinder.014
+    6400152: Cylinder.015
+    6400154: Cylinder.016
+    6400156: Cylinder.017
+    6400158: Cylinder.018
+    6400160: Cylinder.019
+    6400162: door.001
+    6400164: door_handle
+    6400166: door_handle1
+    6400168: door_metal
+    6400170: fridge:base
+    6400172: fridge:base1
+    6400174: fridge:door
+    6400176: fridge:door1
+    6400178: fridge:fridge
+    6400180: fridge:fridge1
+    6400182: fridge:handle
+    6400184: fridge:handle1
+    6400186: fridge:screen
+    6400188: fridge:screen.001
+    6400190: fridge:screen.002
+    6400192: ground
+    6400194: ground1
+    6400196: ground2
+    6400198: pCube1
+    6400200: pCube1.001
+    6400202: pCube1.002
+    6400204: pCube1.003
+    6400206: pCube1.004
+    6400208: pCube1.005
+    6400210: pCube10
+    6400212: pCube11
+    6400214: pCube12
+    6400216: pCube13
+    6400218: pCube15
+    6400220: pCube16
+    6400222: pCube17
+    6400224: pCube18
+    6400226: pCube19
+    6400228: pCube2
+    6400230: pCube20
+    6400232: pCube21
+    6400234: pCube24
+    6400236: pCube25
+    6400238: pCube26
+    6400240: pCube27
+    6400242: pCube28
+    6400244: pCube29
+    6400246: pCube3
+    6400248: pCube30
+    6400250: pCube31
+    6400252: pCube32
+    6400254: pCube33
+    6400256: pCube34
+    6400258: pCube35
+    6400260: pCube36
+    6400262: pCube37
+    6400264: pCube38
+    6400266: pCube39
+    6400268: pCube4
+    6400270: pCube40
+    6400272: pCube41
+    6400274: pCube43
+    6400276: pCube43.001
+    6400278: pCube44
+    6400280: pCube46
+    6400282: pCube5
+    6400284: pCube6
+    6400286: pCube7
+    6400288: pCube8
+    6400290: pCube9
+    6400292: pCylinder2
+    6400294: pCylinder3
+    6400296: pCylinder4
+    6400298: Plane
+    6400300: Plane.001
+    6400302: polySurface1
+    6400304: polySurface11
+    6400306: polySurface12
+    6400308: polySurface14
+    6400310: polySurface14.001
+    6400312: polySurface2
+    6400314: polySurface3
+    6400316: polySurface6
+    6400318: polySurface7
+    6400320: polySurface9
+    6400322: pSphere1
+    6400324: screen.001
+    6400326: screen1
+    6400328: semi_wall_wood1
+    6400330: semi_wall_wood1.001
+    6400332: semi_wall_wood1.002
+    6400334: semi_wall_wood2
+    6400336: semi_wall_wood3
+    6400338: wall_L
+    6400340: wall_L.001
+    6400342: wall_L1
+    6400344: wall_L3
+    6400346: wall_L4
+    6400348: wall_L5
+    6400350: wall_L6
     9500000: //RootNode
     10800000: Point
     10800002: Point.001
@@ -2445,14 +2621,14 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
