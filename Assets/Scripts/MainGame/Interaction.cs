@@ -13,9 +13,15 @@ public class Interaction : MonoBehaviour
     public Button NoButton;
     public Text ChoiceText;
 
+    public AudioSource Audiosource;
+
     // Start is called before the first frame update
     private void Start()
     {
+        if (Audiosource == null)
+        {
+            Audiosource = GameObject.Find("Emil").GetComponent<AudioSource>()
+        }
         if (YesButton == null)
         {
             YesButton = GameObject.Find("YesButton").GetComponent<Button>();
