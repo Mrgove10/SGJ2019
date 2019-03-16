@@ -1,4 +1,5 @@
-[{
+[
+    {
         "Id": 0,
         "Title": "Reveil",
         "ObjetName": "Bed",
@@ -43,7 +44,7 @@
             "SanteMalus": 25,
             "ViePrivBonus": 25,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -67,7 +68,7 @@
             "SanteMalus": 15,
             "ViePrivBonus": 15,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -83,7 +84,7 @@
             "SanteMalus": 0,
             "ViePrivBonus": 0,
             "ViePrivMalus": 20,
-            "Text": "Votre niveau de stress est élevé, Emil. Cela peut affecter votre santé physique et mentale. Je vous recommande au moins 10 minutes de méditation."
+            "Text": "Votre niveau de stress est élevé, {pseudo}. Cela peut affecter votre santé physique et mentale. Je vous recommande au moins 10 minutes de méditation."
         },
         "ChoixNon": {
             "choix": 0,
@@ -91,7 +92,7 @@
             "SanteMalus": 20,
             "ViePrivBonus": 20,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -115,7 +116,7 @@
             "SanteMalus": 25,
             "ViePrivBonus": 25,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -131,7 +132,7 @@
             "SanteMalus": 0,
             "ViePrivBonus": 0,
             "ViePrivMalus": 25,
-            "Text": "Prendre vos médicaments à l'heure tous les jours est important pour votre traitement, Emil. Je vais mettre un rappel sur votre smartphone pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
+            "Text": "Prendre vos médicaments à l'heure tous les jours est important pour votre traitement, {pseudo}. Je vais mettre un rappel sur votre smartphone pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
         },
         "ChoixNon": {
             "choix": 0,
@@ -139,7 +140,7 @@
             "SanteMalus": 25,
             "ViePrivBonus": 25,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -156,7 +157,7 @@
             "SanteMalus": 0,
             "ViePrivBonus": 0,
             "ViePrivMalus": 20,
-            "Text": "Vous avez brûlé 290 calories Emil. C'est génial ! Attention, ne dépassez pas de 350 calories pour dîner !"
+            "Text": "Vous avez brûlé 290 calories {pseudo}. C'est génial ! Attention, ne dépassez pas de 350 calories pour dîner !"
         },
         "ChoixNon": {
             "choix": 0,
@@ -164,7 +165,7 @@
             "SanteMalus": 20,
             "ViePrivBonus": 20,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -180,7 +181,7 @@
             "SanteMalus": 0,
             "ViePrivBonus": 0,
             "ViePrivMalus": 25,
-            "Text": "Prendre vos médicaments à l'heure tous les jours est important pour votre traitement, Emil. Je vais mettre un rappel sur votre smartphone pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
+            "Text": "Prendre vos médicaments à l'heure tous les jours est important pour votre traitement, {pseudo}. Je vais mettre un rappel sur votre smartphone pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
         },
         "ChoixNon": {
             "choix": 0,
@@ -188,7 +189,7 @@
             "SanteMalus": 25,
             "ViePrivBonus": 25,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -204,7 +205,7 @@
             "SanteMalus": 0,
             "ViePrivBonus": 0,
             "ViePrivMalus": 20,
-            "Text": "Vous avez dépassé des calories recommandées, Emil. Pour votre prochain repas, remplissez la moitié de votre assiette de légumes."
+            "Text": "Vous avez dépassé des calories recommandées, {pseudo}. Pour votre prochain repas, remplissez la moitié de votre assiette de légumes."
         },
         "ChoixNon": {
             "choix": 0,
@@ -212,7 +213,7 @@
             "SanteMalus": 20,
             "ViePrivBonus": 20,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     },
     {
@@ -236,7 +237,7 @@
             "SanteMalus": 15,
             "ViePrivBonus": 15,
             "ViePrivMalus": 0,
-            "Text": "Ces données sont utiles pour personnaliser votre suivi, Emil. J'espère que vous me l'enverrez demain."
+            "Text": "Ces données sont utiles pour personnaliser votre suivi, {pseudo}. J'espère que vous me l'enverrez demain."
         }
     }
 ]

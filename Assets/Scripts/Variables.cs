@@ -9,6 +9,8 @@ namespace Assets.Scripts
         public static int CurrentHeure;
         public static int CurrentMinute;
         public static int CurrentMissionID = 0;
+        public static int JaugeSante = 50;
+        public static int JaugeViePriv = 200;
         public static List<Mission> MissionList;
     }
 }

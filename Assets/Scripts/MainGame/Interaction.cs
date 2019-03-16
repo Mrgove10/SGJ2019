@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.MainGame.Class;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +31,7 @@ public class Interaction : MonoBehaviour
             ChoiceWindow = GameObject.Find("ChoiceWindow");
             ChoiceWindow.SetActive(false);
         }
-       
+
         if (InteractionText == null)
         {
             InteractionText = GameObject.Find("TextInteract");
@@ -43,68 +44,16 @@ public class Interaction : MonoBehaviour
     {
         if (OtherObject != null)
         {
-            Debug.Log(Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName);
             if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
             {
+                Renderer rend = OtherObject.GetComponent<Renderer>();
+                rend.material.shader = Shader.Find("_Color");
+                rend.material.SetColor("_Color", Color.green);
                 Debug.Log("I am a door");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Showpopup();
-                    
-                    //TODO:  make material glow
-                }
-            }
-
-            if (OtherObject.name == "Computeur")
-            {
-                Debug.Log("I am a Computeur");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Door");
-                }
-            }
-
-            if (OtherObject.name == "Toilet")
-            {
-                Debug.Log("I am a Toilet");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Door");
-                }
-            }
-
-            if (OtherObject.name == "Balance")
-            {
-                Debug.Log("I am a Balance");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Door");
-                }
-            }
-
-            if (OtherObject.name == "Pharmacie")
-            {
-                Debug.Log("I am a Pharmacie");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Door");
-                }
-            }
-
-            if (OtherObject.name == "Fridge")
-            {
-                Debug.Log("I am a Fridge");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Door");
-                }
-            }
-            if (OtherObject.name == "Bed")
-            {
-                Debug.Log("I am a Bed");
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Door");
+                    InteractionText.SetActive(true);
                 }
             }
         }
@@ -115,7 +64,7 @@ public class Interaction : MonoBehaviour
         OtherObject = other.gameObject;
         if (other.tag == "Interactable")
         {
-            InteractionText.SetActive(true);
+            //InteractionText.SetActive(true);
             Debug.Log("you can interact whit me");
         }
     }
@@ -136,16 +85,24 @@ public class Interaction : MonoBehaviour
 
     private void YesButtonClicked()
     {
-        Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
-        //TODO: implemete bonus et malus
+        Choix m = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixOui;
+        Variables.CurrentMissionID++;
+        Variables.JaugeSante = Variables.JaugeSante + m.SanteBonus;
+        Variables.JaugeSante = Variables.JaugeSante - m.SanteMalus;
+        Variables.JaugeViePriv = Variables.JaugeViePriv + m.ViePrivBonus;
+        Variables.JaugeViePriv = Variables.JaugeViePriv - m.ViePrivMalus;
     }
 
     private void NoButtonClicked()
     {
-        Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
-        //TODO: implemente bonusx et malus
+        Choix m = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixNon;
+        Variables.CurrentMissionID++;
+        Variables.JaugeSante = Variables.JaugeSante + m.SanteBonus;
+        Variables.JaugeSante = Variables.JaugeSante - m.SanteMalus;
+        Variables.JaugeViePriv = Variables.JaugeViePriv + m.ViePrivBonus;
+        Variables.JaugeViePriv = Variables.JaugeViePriv - m.ViePrivMalus;
     }
 
     private void Showpopup()
