@@ -17,18 +17,19 @@ public class FirstStart : MonoBehaviour
     private void Start()
     {
         string json = @"{
-  'Email': 'james@example.com',
-  'Active': true,
-  'CreatedDate': '2013-01-20T00:00:00Z',
-  'Roles': [
-    'User',
-    'Admin'
-  ]
-}";
+          'Email': 'james@example.com',
+          'Active': true,
+          'CreatedDate': '2013-01-20T00:00:00Z',
+          'Roles': [
+            'User',
+            'Admin'
+          ]
+        }"
+            ;
 
-      //  Account account = JsonConvert.DeserializeObject<Account>(json);
+        //  Account account = JsonConvert.DeserializeObject<Account>(json);
 
-      //   Debug.Log(account.Email);
+        //   Debug.Log(account.Email);
     }
 
     // Update is called once per frame

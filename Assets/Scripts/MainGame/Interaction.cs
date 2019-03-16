@@ -31,7 +31,7 @@ public class Interaction : MonoBehaviour
 
             if (OtherObject.name == "Computeur")
             {
-                Debug.Log("I am a door");
+                Debug.Log("I am a Computeur");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Door");
@@ -40,7 +40,7 @@ public class Interaction : MonoBehaviour
 
             if (OtherObject.name == "Toilet")
             {
-                Debug.Log("I am a door");
+                Debug.Log("I am a Toilet");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Door");
@@ -49,7 +49,7 @@ public class Interaction : MonoBehaviour
 
             if (OtherObject.name == "Balance")
             {
-                Debug.Log("I am a door");
+                Debug.Log("I am a Balance");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Door");
@@ -58,16 +58,16 @@ public class Interaction : MonoBehaviour
 
             if (OtherObject.name == "Pharmacie")
             {
-                Debug.Log("I am a door");
+                Debug.Log("I am a Pharmacie");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Door");
                 }
             }
 
-            if (OtherObject.name == "Frige")
+            if (OtherObject.name == "Fridge")
             {
-                Debug.Log("I am a door");
+                Debug.Log("I am a Fridge");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Door");

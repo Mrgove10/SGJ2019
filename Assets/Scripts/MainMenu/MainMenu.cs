@@ -56,7 +56,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Play Button clicked");
         Varriables.NomJoueur = InputNom.text;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Appartement");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingInfo");
     }
 
     private void OnQuitButtonClicked()

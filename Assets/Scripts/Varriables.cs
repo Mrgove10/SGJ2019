@@ -8,7 +8,6 @@ namespace Assets.Scripts
         public static int CurrentHeure;
         public static int CurrentMinute;
         public static List<Notif> NotifList;
-      //  public static List<Mission> MissionList;
-
+        //  public static List<Mission> MissionList;
     }
 }
