@@ -1,4 +1,8 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.MainGame.Class;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +13,7 @@ public class MainMenu : MonoBehaviour
     public Toggle ToggleM;
     public Toggle ToggleF;
     public InputField InputNom;
+    private string FileContent;
 
     private void Start()
     {
@@ -46,7 +51,6 @@ public class MainMenu : MonoBehaviour
     {
         if ((ToggleM.isOn || ToggleF.isOn) && InputNom.text != "")
         {
-            Debug.Log("PlayButton is now clickable");
             PlayButton.interactable = true;
         }
         else { PlayButton.interactable = false; }
@@ -54,18 +58,31 @@ public class MainMenu : MonoBehaviour
 
     private void OnPlayButtonClicked()
     {
-        Debug.Log("Play Button clicked");
-        Varriables.NomJoueur = InputNom.text;
+        Variables.NomJoueur = InputNom.text;
+        Debug.Log("Nom choisi par le joueur: " + Variables.NomJoueur);
+        LoadGameStory(InputNom.text);
         UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingInfo");
     }
 
     private void OnQuitButtonClicked()
     {
-        Debug.Log("Quit Button clicked");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
                 Application.Quit ();
 #endif
+    }
+
+    private void LoadGameStory(string PlayerName)
+    {
+        FileContent = File.ReadAllText("Assets/Scripts/Story.json");
+        FileContent = FileContent.Replace("{pseudo}", PlayerName);
+        Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
+
+        Debug.Log(FileContent);
+        foreach (var pp in PlayerName)
+        {
+            //Debug.Log(pp.Text);
+        }
     }
 }

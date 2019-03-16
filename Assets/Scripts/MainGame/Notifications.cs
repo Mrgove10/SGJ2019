@@ -18,7 +18,7 @@ public class Notifications : MonoBehaviour
     {
         foreach (Notif notif in ListNotif)
         {
-            if (notif.heure == Varriables.CurrentHeure && notif.minute == Varriables.CurrentMinute)
+            if (notif.heure == Variables.CurrentHeure && notif.minute == Variables.CurrentMinute)
             {
                 Debug.Log("vouvou");
             }
