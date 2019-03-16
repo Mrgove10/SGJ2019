@@ -8,7 +8,7 @@ public class Notifications : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Debug.Log("nms");
+      // Debug.Log("nms");
         MyNotifications.CallNotification("ldsdsdol", 3);
     }
 
