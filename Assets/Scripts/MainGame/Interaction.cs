@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 public class Interaction : MonoBehaviour
 {
@@ -124,13 +123,16 @@ public class Interaction : MonoBehaviour
     {
         if (OtherObject != null)
         {
-            if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
+            if (Mission.Id == null || Mission.Id < 10)
             {
-                InteractionText.SetActive(true);
-                Debug.Log("I am a door");
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
                 {
-                    Showpopup();
+                    InteractionText.SetActive(true);
+                    Debug.Log("I am a door");
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Showpopup();
+                    }
                 }
             }
         }
@@ -154,9 +156,8 @@ public class Interaction : MonoBehaviour
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
 
-        if (Mission.Id >= 10)
+        if (Variables.CurrentMissionID >= 10)
         {
-            BlackScreen bs = new BlackScreen();
             bs.FadeIn();
             SceneManager.LoadSceneAsync("EndGame");
         }

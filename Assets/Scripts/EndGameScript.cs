@@ -70,7 +70,7 @@ public class EndGameScript : MonoBehaviour
         {
             MessagePrive = "Même votre employeur sait ce que vous avez mangé ce midi...";
         }
-        else if (Variables.JaugeSante < 25)
+        else if (Variables.JaugeViePriv < 25)
         {
             MessagePrive = "Toute votre vie est consultable comme un livre ouvert.";
         }
