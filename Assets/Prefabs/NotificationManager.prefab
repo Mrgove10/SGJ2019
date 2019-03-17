@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5120307580740663035}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.88154995, y: 0.88154995, z: 0.88154995}
   m_Children: []
@@ -53,7 +53,7 @@ MonoBehaviour:
   myStyle:
     m_Name: upper right
     m_Normal:
-      m_Background: {fileID: 2800000, guid: a66b47e5308ed9946b2a023a4e9ef74d, type: 3}
+      m_Background: {fileID: 2800000, guid: 18fad1b9418034c4e851bd6ef68f16ef, type: 3}
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
     m_Hover:
@@ -107,7 +107,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: f09b955732e969b4383f41e9f4b8152b, type: 3}
     m_FontSize: 0
     m_FontStyle: 0
-    m_Alignment: 4
+    m_Alignment: 0
     m_WordWrap: 1
     m_RichText: 0
     m_TextClipping: 1
@@ -134,15 +134,106 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifications:
-  - author: patron
-    text: "t'es vir\xE9 mdr"
+  - author: Maman
+    text: Bonjour mon ange
     duration: 3
-    conditionValue: 51
-    condition: 1
+    conditionValue: 181
+    condition: 0
     Executed: 0
-  - author: patron
-    text: "t'es encore vir\xE9 mdr"
-    duration: 3
+  - author: Mr Dupuy
+    text: "Bonjour Emil. Chez Dupuy & Cie, le bien-\xEAtre de nos employ\xE9s est
+      notre priorit\xE9 \u2013 \xE9tant responsables de la prise en charge de..."
+    duration: 7
+    conditionValue: 156
+    condition: 0
+    Executed: 0
+  - author: Mr Dupuy
+    text: "...votre mutuelle, il est important pour notre soci\xE9t\xE9 que vous fassiez
+      le n\xE9c\xE9ssaire pour rester en bonne sant\xE9. Cordialement, Mr Dupuy. "
+    duration: 7
+    conditionValue: 156
+    condition: 0
+    Executed: 0
+  - author: "Diet\xE9ti-Pros!"
+    text: "Vous habitez Fontaine-Sous-Bois ? Rejoignez d\xE8s \xE0 pr\xE9sent un groupe
+      de soutien pour vous aider \xE0 maigrir ! Pour plus de renseignements..."
+    duration: 7
+    conditionValue: 156
+    condition: 0
+    Executed: 0
+  - author: "Diet\xE9ti-Pros!"
+    text: "...et des conseils d'experts nutritrionnels personnalis\xE9s, appelez le
+      08 24 160 110 !"
+    duration: 7
+    conditionValue: 156
+    condition: 0
+    Executed: 0
+  - author: Dr Isadore (nutritionniste)
+    text: "Les oeufs sont riches en graisses. Essayez de les limiter au petit d\xE9jeuner."
+    duration: 5
+    conditionValue: 141
+    condition: 0
+    Executed: 0
+  - author: Pharmacie des Moulins
+    text: "Savez-vous que la val\xE9riane peut vous aider \xE0 g\xE9rer le stress
+      ? Parlez-en \xE0 votre pharmacien."
+    duration: 5
+    conditionValue: 121
+    condition: 0
+    Executed: 0
+  - author: Mr Dupuy
+    text: "Emil, vous n'\xEAtes pas sans savoir que le taux du contrat de  mutuelle
+      vous concernant a augment\xE9 \xE0 d\xE9j\xE0 trois reprises au cours des..."
+    duration: 7
+    conditionValue: 96
+    condition: 0
+    Executed: 0
+  - author: Mr Dupuy
+    text: "...deux derni\xE8res ann\xE9es. La soci\xE9t\xE9 Dupuy & Cie a toujours
+      pris soin de ses employ\xE9s, mais nous comptons aussi sur les employ\xE9s pour
+      faire..."
+    duration: 7
+    conditionValue: 96
+    condition: 0
+    Executed: 0
+  - author: Mr Dupuy
+    text: '...des efforts dans le but de mener un train de vie sain. Cordialement,
+      Mr Dupuy. '
+    duration: 5
+    conditionValue: 96
+    condition: 0
+    Executed: 0
+  - author: Online Deals
+    text: "Suppl\xE9ments pour limiter l'app\xE9tit \u2013 contr\xF4lez votre faim
+      facilement\_! Cliquez ici pour en savoir plus : <message signal\xE9 comme spam>"
+    duration: 5
     conditionValue: 201
+    condition: 0
+    Executed: 0
+  - author: Emma, RH chez Dupuy & Cie
+    text: "Vous avez l\u2019air d\u2019\xEAtre sportif, Emil ! Je vous ai rajout\xE9
+      \xE0 la mailing list pour le marathon inter-entreprises ! Si vous pratiquez..."
+    duration: 7
+    conditionValue: 31
+    condition: 0
+    Executed: 0
+  - author: Emma, RH chez Dupuy & Cie
+    text: "...r\xE9guli\xE8rement, pourquoi ne pas rejoindre notre programme de r\xE9compenses
+      \"Healthy Employees\"\_? "
+    duration: 7
+    conditionValue: 31
+    condition: 0
+    Executed: 0
+  - author: 'Pharmacie des Moulins '
+    text: "Baisse d'energie, moral bas = manque de fruits. Renseignez-vous aupr\xE8s
+      de votre pharmacien pour un suppl\xE9ment de vitamine C. "
+    duration: 5
+    conditionValue: 11
+    condition: 0
+    Executed: 0
+  - author: Maman
+    text: Bonne nuit, mon ange
+    duration: 3
+    conditionValue: 1
     condition: 0
     Executed: 0
