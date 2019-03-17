@@ -134,9 +134,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifications:
-  - author: Maman
-    text: "Bonjour mon b\xE9b\xE9 !"
+  - author: patron
+    text: "t'es vir\xE9 mdr"
     duration: 3
     conditionValue: 51
     condition: 1
+    Executed: 0
+  - author: patron
+    text: "t'es encore vir\xE9 mdr"
+    duration: 3
+    conditionValue: 201
+    condition: 0
     Executed: 0
