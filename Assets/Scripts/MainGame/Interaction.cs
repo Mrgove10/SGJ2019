@@ -169,14 +169,14 @@ public class Interaction : MonoBehaviour
         AfterConfirmation(false);
     }
 
-    private void AfterConfirmation()
+    private void AfterConfirmation(bool choice)
     {
         Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
         //TODO :  fondu au noir ici  elipse
     }
 
-    private void Showpopup(bool choice)
+    private void Showpopup()
     {
         ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
         ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
