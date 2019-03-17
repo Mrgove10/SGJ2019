@@ -15,7 +15,7 @@ public class BlackScreen : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
-    private IEnumerator FadeInCoroutine(bool followedByFadeOut)
+    public IEnumerator FadeInCoroutine(bool followedByFadeOut)
     {
         float t = 0f;
         Color c = maskImage.color;
@@ -33,7 +33,7 @@ public class BlackScreen : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeOutCoroutine()
+    public IEnumerator FadeOutCoroutine()
     {
         float t = 0f;
         Color c = maskImage.color;
