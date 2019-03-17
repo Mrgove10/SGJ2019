@@ -9,6 +9,7 @@ public class Notifications : MonoBehaviour
         //ATTENTION :
         //VEILLEZ A BIEN VOULOIR FAIRE LES PHRASES LES PLUS COURTES POSSIBLE POUR EVITER UN DEBORDEMENT
         CreateNoti("Patron2merde", "Salut ! Je veux juste te dire que ta maladie c'est de la merde !", 5);
+        MyNotifications.CallNotification("test2", 3);
     }
 
     public void CreateNoti(string titre, string desc, float duree)
