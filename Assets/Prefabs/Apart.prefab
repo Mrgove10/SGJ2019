@@ -543,6 +543,7 @@ MonoBehaviour:
   - {fileID: 8229689032518139525}
   - {fileID: 8229689032518139527}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!1 &8229689032515870739
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +610,7 @@ MonoBehaviour:
   - {fileID: 8229689032518139601}
   - {fileID: 8229689032518139605}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!1 &8229689032515870741
 GameObject:
   m_ObjectHideFlags: 0
@@ -8873,6 +8875,7 @@ MonoBehaviour:
   - {fileID: 8229689032518139541}
   - {fileID: 8229689032518139543}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!1 &8229689032515873785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9061,6 +9064,7 @@ MonoBehaviour:
   - {fileID: 8229689032518139475}
   - {fileID: 8229689032518139477}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!65 &1098020303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10356,6 +10360,7 @@ MonoBehaviour:
   meshRenderers:
   - {fileID: 8229689032518139555}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!1 &8229689032515874205
 GameObject:
   m_ObjectHideFlags: 0
@@ -11553,6 +11558,7 @@ MonoBehaviour:
   - {fileID: 8229689032518139753}
   - {fileID: 8229689032518139755}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!1 &8229689032515874267
 GameObject:
   m_ObjectHideFlags: 0
@@ -18400,6 +18406,7 @@ MonoBehaviour:
   - {fileID: 8229689032518139587}
   - {fileID: 8229689032518139589}
   canInteractColor: {r: 0, g: 0.5660378, b: 0.5065522, a: 1}
+  speed: 5
 --- !u!1 &8229689032515874815
 GameObject:
   m_ObjectHideFlags: 0
