@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Interaction : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Interaction : MonoBehaviour
     public Text ChoiceParagraphtwo;
 
     #endregion choicewidow2
+
+    public BlackScreen bs;
 
     public AudioSource Audiosource;
 
@@ -236,7 +239,6 @@ public class Interaction : MonoBehaviour
     private void okButtonClicked()
     {
         ChoiceWindowtwo.SetActive(false);
-        BlackScreen bs = new BlackScreen();
         bs.Ellipse();
     }
 }
