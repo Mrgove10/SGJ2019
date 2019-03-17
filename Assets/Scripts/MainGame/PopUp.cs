@@ -1,6 +1,4 @@
 ﻿using Assets.Scripts;
-using Assets.Scripts.MainGame.Class;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -17,7 +15,7 @@ public class PopUp : MonoBehaviour
     {
         if (Variables.MissionList == null || Variables.MissionList.Count == 0)
         {
-            LoadGameStory(Variables.NomJoueur);
+           // LoadGameStory(Variables.NomJoueur);
         }
 
         if (MissionNameText == null)
@@ -53,24 +51,24 @@ public class PopUp : MonoBehaviour
         Debug.Log(Mission.Id);
     }
 
-    private void LoadGameStory(string PlayerName)
-    {
+    //private void LoadGameStory(string PlayerName)
+    //{
 
-        // Path.Combine combines strings into a file path
-        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
-        string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
+    //    // Path.Combine combines strings into a file path
+    //    // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
+    //    string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
 
-        if (File.Exists(filePath))
-        {
-            // Read the json from the file into a string
-            FileContent = File.ReadAllText(filePath);
-            FileContent = FileContent.Replace("{pseudo}", PlayerName);
-            Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
-        }
-        else
-        {
-            Debug.LogError("Cannot load game data!");
-        }
+    //    if (File.Exists(filePath))
+    //    {
+    //        // Read the json from the file into a string
+    //        FileContent = File.ReadAllText(filePath);
+    //        FileContent = FileContent.Replace("{pseudo}", PlayerName);
+    //        Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("Cannot load game data!");
+    //    }
 
-    }
+    //}
 }

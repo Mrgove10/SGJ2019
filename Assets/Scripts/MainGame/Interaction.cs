@@ -1,9 +1,6 @@
 ﻿using Assets.Scripts;
-using Assets.Scripts.MainGame.Class;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
@@ -11,11 +8,24 @@ public class Interaction : MonoBehaviour
     public GameObject InteractionText;
     public GameObject OtherObject;
 
+    #region choicewindo
+
     public GameObject ChoiceWindow;
     public Button YesButton;
     public Button NoButton;
     public Text ChoiceTitle;
     public Text ChoiceParagraph;
+
+    #endregion choicewindo
+
+    #region choicewidow2
+
+    public GameObject ChoiceWindowtwo;
+    public Button YesButtontwo;
+    public Text ChoiceTitletwo;
+    public Text ChoiceParagraphtwo;
+
+    #endregion choicewidow2
 
     public AudioSource Audiosource;
 
@@ -54,11 +64,31 @@ public class Interaction : MonoBehaviour
 
         #endregion popup
 
+        #region popuptwo
+
+        if (ChoiceParagraphtwo == null)
+        {
+            ChoiceParagraphtwo = GameObject.Find("ChoiceParagraphtwo").GetComponent<Text>();
+        }
+        if (YesButtontwo == null)
+        {
+            YesButtontwo = GameObject.Find("okButtontwo").GetComponent<Button>();
+            YesButtontwo.onClick.AddListener(YesButtonClicked);
+        }
+
+        if (ChoiceWindowtwo == null)
+        {
+            ChoiceWindowtwo = GameObject.Find("ChoiceWindowtwo");
+            ChoiceWindowtwo.SetActive(false);
+        }
+
+        #endregion popuptwo
+
         #region misions
 
         if (Variables.MissionList == null || Variables.MissionList.Count == 0)
         {
-            LoadGameStory(Variables.NomJoueur);
+            //LoadGameStory(Variables.NomJoueur);
         }
         if (MissionNameText == null)
         {
@@ -121,8 +151,14 @@ public class Interaction : MonoBehaviour
         }
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
-        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
-        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+
+        if (Mission.Id >= 10)
+        {
+            BlackScreen bs = new BlackScreen();
+            bs.FadeIn();
+            SceneManager.LoadSceneAsync("EndGame");
+        }
+
         Debug.Log(Mission.Id);
     }
 
@@ -153,54 +189,40 @@ public class Interaction : MonoBehaviour
     private void YesButtonClicked()
     {
         Choix m = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixOui;
-        Variables.JaugeSante = Variables.JaugeSante + m.SanteBonus;
-        Variables.JaugeSante = Variables.JaugeSante - m.SanteMalus;
-        Variables.JaugeViePriv = Variables.JaugeViePriv + m.ViePrivBonus;
-        Variables.JaugeViePriv = Variables.JaugeViePriv - m.ViePrivMalus;
-        AfterConfirmation();
+        Variables.JaugeSante = Variables.JaugeSante + m.deltaSanté;
+        Variables.JaugeViePriv = Variables.JaugeViePriv + m.deltaViePriv;
+        AfterConfirmation(true);
     }
 
     private void NoButtonClicked()
     {
         Choix m = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixNon;
-        Variables.JaugeSante = Variables.JaugeSante + m.SanteBonus;
-        Variables.JaugeSante = Variables.JaugeSante - m.SanteMalus;
-        Variables.JaugeViePriv = Variables.JaugeViePriv + m.ViePrivBonus;
-        Variables.JaugeViePriv = Variables.JaugeViePriv - m.ViePrivMalus;
-        AfterConfirmation();
+        Variables.JaugeSante = Variables.JaugeSante + m.deltaSanté;
+        Variables.JaugeViePriv = Variables.JaugeViePriv + m.deltaViePriv;
+        AfterConfirmation(false);
     }
 
-    private void AfterConfirmation()
+    private void AfterConfirmation(bool choice)
     {
         Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
 
-        //TODO :  fondu au noir ici
+        //TODO :  fondu au noir ici  elipse
     }
 
     private void Showpopup()
     {
         ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
         ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
+
         ChoiceWindow.SetActive(true);
     }
 
-    private void LoadGameStory(string PlayerName)
+    private ShowpopupSecondaire()
     {
-        // Path.Combine combines strings into a file path
-        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
-        string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
+        ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
+        ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
 
-        if (File.Exists(filePath))
-        {
-            // Read the json from the file into a string
-            FileContent = File.ReadAllText(filePath);
-            FileContent = FileContent.Replace("{pseudo}", PlayerName);
-            Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
-        }
-        else
-        {
-            Debug.LogError("Cannot load game data!");
-        }
+        ChoiceWindow.SetActive(true);
     }
 }

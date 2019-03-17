@@ -535,8 +535,8 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.86842084
-        functionName: playSound
-        data: step
+        functionName: PlaySound
+        data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0

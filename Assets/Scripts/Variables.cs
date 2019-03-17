@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.MainGame.Class;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Assets.Scripts
 {
