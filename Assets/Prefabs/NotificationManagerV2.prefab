@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5120307580740663035
+--- !u!1 &5959013979138416798
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5120307580740663032}
-  - component: {fileID: 5120307580740663033}
-  - component: {fileID: 4843236896906799600}
+  - component: {fileID: 5959013979138416797}
+  - component: {fileID: 5959013979138416796}
+  - component: {fileID: 5959013979138416799}
+  - component: {fileID: 6236066520797642645}
   m_Layer: 0
-  m_Name: NotificationManager
+  m_Name: NotificationManagerV2
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5120307580740663032
+--- !u!224 &5959013979138416797
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5120307580740663035}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 5959013979138416798}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.88154995, y: 0.88154995, z: 0.88154995}
   m_Children: []
@@ -37,13 +38,13 @@ RectTransform:
   m_AnchoredPosition: {x: 387, y: 290}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &5120307580740663033
+--- !u!114 &5959013979138416796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5120307580740663035}
+  m_GameObject: {fileID: 5959013979138416798}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea5d01c7a6f74b7a86e3c9937459e25, type: 3}
@@ -121,13 +122,91 @@ MonoBehaviour:
   endPos: {x: 0, y: 0}
   size: {x: 400, y: 100}
   ourSound: {fileID: 0}
---- !u!114 &4843236896906799600
+--- !u!114 &5959013979138416799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5120307580740663035}
+  m_GameObject: {fileID: 5959013979138416798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fb07317dad9da409d607142da8c6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notifications:
+  - author: 'Patron :'
+    text: "Votre sant\xE9 est importante pour notre soci\xE9t\xE9. Faites le n\xE9cessaire."
+    duration: 5
+    conditionValue: 160
+    condition: 0
+    Executed: 0
+  - author: 'Patron :'
+    text: "Le taux de contrat de votre mutuelle \xE0 encore augment\xE9... Mangez
+      plus sainement. "
+    duration: 5
+    conditionValue: 100
+    condition: 0
+    Executed: 0
+  - author: 'Patron :'
+    text: "Nous savons que vous \xEAtes du genre gourmand. Les personnes gourmandes
+      n'ont pas leur place ici. Dernier avertissement."
+    duration: 7
+    conditionValue: 50
+    condition: 0
+    Executed: 0
+  - author: 'Patron :'
+    text: Au vu de votre mode de vie, nous ne somme plus en mesure de vous garder.
+      Aurevoir.
+    duration: 3
+    conditionValue: 20
+    condition: 0
+    Executed: 0
+  - author: 'Medecin :'
+    text: "Vous \xEAtes en pleine forme ! Continuez ainsi !"
+    duration: 5
+    conditionValue: 75
+    condition: 2
+    Executed: 0
+  - author: 'Medecin :'
+    text: "Vous vous portez tr\xE8s bien ! Merci !"
+    duration: 4
+    conditionValue: 90
+    condition: 2
+    Executed: 0
+  - author: 'Medecin :'
+    text: "Vous \xEAtes en bonne sant\xE9 ! Continuez d'utiliser vos appareils connect\xE9s."
+    duration: 5
+    conditionValue: 60
+    condition: 2
+    Executed: 0
+  - author: "Ros\xE9e du matin marketing :"
+    text: "Votre corps de futur champion m\xE9rite mieux : Decouvrez notre gamme de
+      parfum con\xE7u pour vous."
+    duration: 5
+    conditionValue: 65
+    condition: 2
+    Executed: 0
+  - author: 'Run And Go :'
+    text: "Vous \xEAtes sportif ! Que direz-vous de vous inscrire \xE0 notre marathon
+      ?"
+    duration: 5
+    conditionValue: 70
+    condition: 2
+    Executed: 0
+  - author: 'Medecin :'
+    text: "Vous vous portez mieux ! N'h\xE9sitez pas \xE0 utiliser les objets connect\xE9s"
+    duration: 5
+    conditionValue: 60
+    condition: 2
+    Executed: 0
+--- !u!114 &6236066520797642645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959013979138416798}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8fb07317dad9da409d607142da8c6e6, type: 3}
