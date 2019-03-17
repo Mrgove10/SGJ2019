@@ -8,11 +8,24 @@ public class Interaction : MonoBehaviour
     public GameObject InteractionText;
     public GameObject OtherObject;
 
+    #region choicewindo
+
     public GameObject ChoiceWindow;
     public Button YesButton;
     public Button NoButton;
     public Text ChoiceTitle;
     public Text ChoiceParagraph;
+
+    #endregion choicewindo
+
+    #region choicewidow2
+
+    public GameObject ChoiceWindowtwo;
+    public Button YesButtontwo;
+    public Text ChoiceTitletwo;
+    public Text ChoiceParagraphtwo;
+
+    #endregion choicewidow2
 
     public AudioSource Audiosource;
 
@@ -50,6 +63,26 @@ public class Interaction : MonoBehaviour
         }
 
         #endregion popup
+
+        #region popuptwo
+
+        if (ChoiceParagraphtwo == null)
+        {
+            ChoiceParagraphtwo = GameObject.Find("ChoiceParagraphtwo").GetComponent<Text>();
+        }
+        if (YesButtontwo == null)
+        {
+            YesButtontwo = GameObject.Find("okButtontwo").GetComponent<Button>();
+            YesButtontwo.onClick.AddListener(YesButtonClicked);
+        }
+
+        if (ChoiceWindowtwo == null)
+        {
+            ChoiceWindowtwo = GameObject.Find("ChoiceWindowtwo");
+            ChoiceWindowtwo.SetActive(false);
+        }
+
+        #endregion popuptwo
 
         #region misions
 
@@ -173,10 +206,19 @@ public class Interaction : MonoBehaviour
     {
         Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
+
         //TODO :  fondu au noir ici  elipse
     }
 
     private void Showpopup()
+    {
+        ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
+        ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
+
+        ChoiceWindow.SetActive(true);
+    }
+
+    private ShowpopupSecondaire()
     {
         ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
         ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
