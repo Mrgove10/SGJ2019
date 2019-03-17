@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using Assets.Scripts;
 public class EchapMenu : MonoBehaviour
 {
     public bool IsEscapeMenuPossible = true;
@@ -61,6 +61,7 @@ public class EchapMenu : MonoBehaviour
 
     private void OnRetunMenuButtonESCClicked()
     {
+        Variables.CurrentMissionID = 0;
         SceneManager.LoadSceneAsync("MainMenu");
     }
 }
