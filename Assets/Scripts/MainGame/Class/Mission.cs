@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace Assets.Scripts.MainGame.Class
-{
+
     [System.Serializable]
     public class Mission
     {
@@ -21,4 +20,3 @@ namespace Assets.Scripts.MainGame.Class
         
         public Choix ChoixNon;
     }
-}

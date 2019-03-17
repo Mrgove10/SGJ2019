@@ -5,6 +5,6 @@ using UnityEngine;
 public class Scenario : MonoBehaviour
 {
 
-    public Mission[] missions;
+    public List<Mission> missions;
 
 }

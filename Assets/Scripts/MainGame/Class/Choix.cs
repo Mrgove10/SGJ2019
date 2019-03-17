@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace Assets.Scripts.MainGame.Class
-{
+
     [Serializable]
     public class Choix
     {
@@ -13,4 +12,3 @@ namespace Assets.Scripts.MainGame.Class
 
         public string Text;
     }
-}
