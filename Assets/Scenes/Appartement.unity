@@ -1004,6 +1004,11 @@ PrefabInstance:
       propertyPath: ourSound
       value: 
       objectReference: {fileID: 1250178546}
+    - target: {fileID: 5959013979138416799, guid: f00767be0d0885f4b8854ccf402d9623,
+        type: 3}
+      propertyPath: notifications.Array.data[3].duration
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00767be0d0885f4b8854ccf402d9623, type: 3}
 --- !u!1001 &7139127031458238138
