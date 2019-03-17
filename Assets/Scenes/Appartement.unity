@@ -843,24 +843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be68c2bab5ed94243addd7b19f59759a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mission:
-    Id: 0
-    Title: 
-    ObjetName: 
-    Text: 
-    Heure: 0
-    Minute: 0
-    ChoixOui:
-      choix: 0
-      "deltaSant\xE9": 0
-      deltaViePriv: 0
-      Text: 
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": 0
-      deltaViePriv: 0
-      Text: 
-  MissionNameText: {fileID: 0}
 --- !u!114 &1601929664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,6 +1438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139127030912445032, guid: a3f97edb1e60e11498c4a80f7f7f4599,
+        type: 3}
+      propertyPath: m_FillCenter
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f97edb1e60e11498c4a80f7f7f4599, type: 3}
