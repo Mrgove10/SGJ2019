@@ -1033,264 +1033,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &804736255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 804736257}
-  - component: {fileID: 804736256}
-  m_Layer: 0
-  m_Name: Scenario
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &804736256
+--- !u!114 &804736256 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+    type: 3}
+  m_PrefabInstance: {fileID: 876920536468047868}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804736255}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a66a1f719dd5a7f428a22df3f506f16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missions:
-  - Id: 0
-    Title: Reveil
-    ObjetName: bed
-    Text: "Votre lit connect\xE9 a enregistr\xE9 des donn\xE9es sur la dur\xE9e et
-      la qualit\xE9 de votre sommeil. Ces donn\xE9es peuvent aider votre m\xE9decin
-      \xE0 vous donner le feedback personnalis\xE9 sur votre sommeil.  Voulez-vous
-      les envoyer ?"
-    Heure: 7
-    Minute: 0
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 20
-      deltaViePriv: -20
-      Text: Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -20
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 1
-    Title: Peser
-    ObjetName: Scale
-    Text: "Votre balance connect\xE9e a enregistr\xE9 votre poids. Selon votre IMC,
-      vous \xEAtes en surpoids. Ces donn\xE9es peuvent aider votre m\xE9decin \xE0
-      vous proposer des conseils de nutrition et d\u2019exercice personnalis\xE9s.
-      Voulez-vous les envoyer ?"
-    Heure: 7
-    Minute: 10
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 25
-      deltaViePriv: -25
-      Text: "Vous \xEAtes en surpoids. Maigrir vous ferait du bien. Prenez un petit
-        d\xE9jeuner \xE0 <350 calories et faites au moins 30 minutes d'exercice aujourd\u2019hui."
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -25
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 2
-    Title: "Petit D\xE9jeuner"
-    ObjetName: fridge
-    Text: "Votre frigo connect\xE9 enregistre que vous mangez des \u0153ufs pour le
-      petit d\xE9jeuner (550 calories). Ces donn\xE9es peuvent aider votre m\xE9decin
-      \xE0 vous proposer des conseils de nutrition et d\u2019exercice personnalis\xE9s.
-      Voulez-vous l\u2019envoyer ces donn\xE9es ?"
-    Heure: 7
-    Minute: 20
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 15
-      deltaViePriv: -15
-      Text: "Vous avez consommez 550 calories pour le petit d\xE9jeuner. Assurez-vous
-        de ne pas d\xE9passer 900 calories au d\xE9jeuner. N'oubliez pas de faire
-        au moins 30 minutes d'exercice aujourd'hui !"
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -15
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 3
-    Title: "Au boul\xF4t !"
-    ObjetName: desk
-    Text: "La montre intelligente que vous portez capte votre niveau de stress en
-      fonction de la variabilit\xE9 de votre fr\xE9quence cardiaque. Vous semblez
-      plus stress\xE9 que d'habitude. Ces donn\xE9es peuvent aider votre medecin \xE0
-      vous donner des conseils personnalis\xE9s pour mieux gerer votre stress. Voulez-vous
-      les envoyer ?"
-    Heure: 9
-    Minute: 0
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 20
-      deltaViePriv: -20
-      Text: "Votre niveau de stress est \xE9lev\xE9, {pseudo}. Cela peut affecter
-        votre sant\xE9 physique et mentale. Je vous recommande au moins 10 minutes
-        de m\xE9ditation."
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -20
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 4
-    Title: Dejeuner
-    ObjetName: fridge
-    Text: "Votre frigo connect\xE9 enregistre que vous mangez une demi-pizza et un
-      petit cupcake pour le d\xE9jeuner (1350 calories). Ces donn\xE9es peuvent aider
-      votre m\xE9decin \xE0 vous proposer des conseils de nutrition et d\u2019exercice
-      personnalis\xE9s. Voulez-vous les envoyer ?"
-    Heure: 12
-    Minute: 30
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 25
-      deltaViePriv: -25
-      Text: "Vous avez d\xE9pass\xE9 des calories recommand\xE9es. Assurez-vous de
-        ne pas d\xE9passer 300 calories au d\xEEner. N'oubliez pas de faire au moins
-        40 minutes d'exercice aujourd'hui !"
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -25
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 5
-    Title: Prenez vos Medocs !
-    ObjetName: pharmacy
-    Text: "Votre bo\xEEte \xE0 pilules connect\xE9e enregistre que vous avez oubli\xE9
-      de prendre vos m\xE9dicaments \xE0 l'heure. Ces donn\xE9es peuvent aider votre
-      m\xE9decin \xE0 vous proposer des conseils personnalis\xE9s pour am\xE9liorer
-      votre adh\xE9sion au traitement. Voulez-vous les envoyer ?"
-    Heure: 13
-    Minute: 0
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 25
-      deltaViePriv: -25
-      Text: "Prendre vos m\xE9dicaments \xE0 l'heure tous les jours est important
-        pour votre traitement, {pseudo}. Je vais mettre un rappel sur votre smartphone
-        pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -25
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 6
-    Title: Toilettes
-    ObjetName: WC
-    Text: "Vos toilettes connect\xE9 sont \xE9quip\xE9es de capteurs qui recueillent
-      des informations sur votre microbiote. Ces donn\xE9es peuvent aider votre m\xE9decin
-      \xE0 vous proposer des conseils personnalis\xE9s pour am\xE9liorer votre adh\xE9sion
-      au traitement. Voulez-vous les envoyer ?"
-    Heure: 14
-    Minute: 0
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 20
-      deltaViePriv: -20
-      Text: "Vous avez br\xFBl\xE9 290 calories {pseudo}. C'est g\xE9nial ! Attention,
-        ne d\xE9passez pas de 350 calories pour d\xEEner !"
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -20
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 7
-    Title: Aller faire du sport !
-    ObjetName: door
-    Text: "Vous \xEAtes sur le point d'aller courir. Votre montre intelligente capte
-      votre temps d\u2019exercice et les calories br\xFBl\xE9es. Ces donn\xE9es peuvent
-      aider votre m\xE9decin \xE0 vous proposer des conseils personnalis\xE9s pour
-      am\xE9liorer votre adh\xE9sion au traitement. Voulez-vous les envoyer ?"
-    Heure: 16
-    Minute: 30
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 25
-      deltaViePriv: -20
-      Text: "Vous avez br\xFBl\xE9 290 calories Emil. C'est g\xE9nial ! Attention,
-        ne d\xE9passez pas de 350 calories pour d\xEEner !"
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -25
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 8
-    Title: Diner
-    ObjetName: fridge
-    Text: "Votre frigo connect\xE9 enregistre que vous mangez une salade au saumon
-      pour le d\xEEner (400 calories). Ces donn\xE9es peuvent aider votre m\xE9decin
-      \xE0 vous proposer des conseils personnalis\xE9s pour am\xE9liorer votre adh\xE9sion
-      au traitement. Voulez-vous les envoyer ?"
-    Heure: 19
-    Minute: 30
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 20
-      deltaViePriv: -20
-      Text: "Vous avez d\xE9pass\xE9 des calories recommand\xE9es, {pseudo}. Pour
-        votre prochain repas, remplissez la moiti\xE9 de votre assiette de l\xE9gumes."
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -20
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
-  - Id: 9
-    Title: Allez dormir
-    ObjetName: bed
-    Text: "Votre lit connect\xE9 a enregistr\xE9 des donn\xE9es sur l\u2019heure que
-      vous vous couchez. Ces donn\xE9es peuvent aider votre m\xE9decin \xE0 vous proposer
-      des conseils personnalis\xE9s pour am\xE9liorer votre adh\xE9sion au traitement.
-      Voulez-vous les envoyer ?"
-    Heure: 22
-    Minute: 30
-    ChoixOui:
-      choix: 1
-      "deltaSant\xE9": 15
-      deltaViePriv: -15
-      Text: "D'apr\xE8s de vos donn\xE9es, l'heure id\xE9ale \xE0 vous r\xE9veiller
-        demain est \xE0 7:00 du matin."
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": -15
-      deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
---- !u!4 &804736257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804736255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 248, y: 275.52002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &829797925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,3 +2377,72 @@ Transform:
   m_Father: {fileID: 337175570}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &876920536468047868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 876920536185899779, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_Name
+      value: Scenario
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 248
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 275.52002
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899773, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79a3499635dc93a4cb2e527567d9986e, type: 3}
