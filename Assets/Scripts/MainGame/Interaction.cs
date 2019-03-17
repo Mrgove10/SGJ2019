@@ -22,7 +22,6 @@ public class Interaction : MonoBehaviour
 
     public GameObject ChoiceWindowtwo;
     public Button YesButtontwo;
-    public Text ChoiceTitletwo;
     public Text ChoiceParagraphtwo;
 
     #endregion choicewidow2
@@ -206,7 +205,8 @@ public class Interaction : MonoBehaviour
     {
         Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
-
+        ChoiceWindowtwo.SetActive(true);
+        ShowpopupSecondaire(choice);
         //TODO :  fondu au noir ici  elipse
     }
 
@@ -218,11 +218,20 @@ public class Interaction : MonoBehaviour
         ChoiceWindow.SetActive(true);
     }
 
-    private ShowpopupSecondaire()
+    private void ShowpopupSecondaire(bool etat)
     {
-        ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
-        ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
+        if (etat == true)
+        {
+            ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
+            ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
 
-        ChoiceWindow.SetActive(true);
+        }
+
+        if (etat == false)
+        {
+
+        }
+
+        ChoiceWindow.SetActive(false);
     }
 }
