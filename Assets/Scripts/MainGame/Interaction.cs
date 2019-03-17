@@ -207,7 +207,6 @@ public class Interaction : MonoBehaviour
 
     private void AfterConfirmation(bool choice)
     {
-        Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
         ChoiceWindowtwo.SetActive(true);
         ShowpopupSecondaire(choice);
@@ -235,6 +234,7 @@ public class Interaction : MonoBehaviour
         }
 
         ChoiceWindow.SetActive(false);
+        Variables.CurrentMissionID++;
     }
 
     private void okButtonClicked()

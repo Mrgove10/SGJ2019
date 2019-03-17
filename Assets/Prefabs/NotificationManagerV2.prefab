@@ -213,12 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifications:
-  - author: Maman
-    text: Bonjour mon ange
-    duration: 3
-    conditionValue: 181
-    condition: 0
-    Executed: 0
   - author: Mr Dupuy
     text: "Bonjour Emil. Chez Dupuy & Cie, le bien-\xEAtre de nos employ\xE9s est
       notre priorit\xE9 \u2013 \xE9tant responsables de la prise en charge de..."

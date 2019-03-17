@@ -1,19 +1,17 @@
 ﻿using Assets.Scripts;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
     public Button PlayButton;
     public Button QuitButton;
+    public Button CreditButton;
     public Toggle ToggleM;
     public Toggle ToggleF;
     public InputField InputNom;
     private string FileContent;
-    public TextAsset Json;
     public Scenario scenario;
 
     private void Start()
@@ -26,6 +24,12 @@ public class MainMenu : MonoBehaviour
         }
 
         PlayButton.interactable = false;
+
+        if (CreditButton == null)
+        {
+            CreditButton = GameObject.Find("CreditButton").GetComponent<Button>();
+            CreditButton.onClick.AddListener(OnCreditButtonClicked);
+        }
 
         if (InputNom == null)
         {
@@ -62,8 +66,13 @@ public class MainMenu : MonoBehaviour
     {
         Variables.NomJoueur = InputNom.text;
         Debug.Log("Nom choisi par le joueur: " + Variables.NomJoueur);
-        //LoadGameStory(InputNom.text);
         SceneManager.LoadSceneAsync("LoadingInfo");
+    }
+
+    private void OnCreditButtonClicked()
+    {
+        Debug.Log("credti clecked");
+        SceneManager.LoadSceneAsync("Credits");
     }
 
     private void OnQuitButtonClicked()
@@ -74,23 +83,4 @@ public class MainMenu : MonoBehaviour
                 Application.Quit ();
 #endif
     }
-
-    //private void LoadGameStory(string PlayerName)
-    //{
-    //    // Path.Combine combines strings into a file path
-    //    // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
-    //    string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
-
-    //    if (File.Exists(filePath))
-    //    {
-    //        // Read the json from the file into a string
-    //        FileContent = File.ReadAllText(filePath);
-    //        FileContent = FileContent.Replace("{pseudo}", PlayerName);
-    //        Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("Cannot load game data!");
-    //    }
-    //}
 }

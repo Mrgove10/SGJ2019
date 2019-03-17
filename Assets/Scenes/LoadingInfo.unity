@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -248,20 +248,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Votre m\xE9decin vous diagnostique une maladie chronique.\r\n\nAfin d\u2019\xE9viter
-    les complications graves de la sant\xE9, vous devez g\xE9rer plusieurs aspects
-    de votre vie. Vous devez manger sainement, faire de l'exercice r\xE9guli\xE8rement,
-    g\xE9rer le stress et bien dormir.\r\n\nVotre m\xE9decin vous propose d'utiliser
-    d\u2019appareils num\xE9riques pour recueillir des donn\xE9es sur votre comportement
-    et sur votre physiologie. Si vous choisissez de lui envoyer ces donn\xE9es, il
-    vous enviera des conseils personnalis\xE9es pour vous aider \xE0 faire des choix
-    plus sains et \xE0 rester en bonne sant\xE9.\r\n\nVotre assurance maladie priv\xE9e
-    peut acc\xE9der aux donn\xE9es envoy\xE9es \xE0 votre m\xE9decin. Selon votre
-    mode de vie, ils peuvent augmenter ou diminuer vos co\xFBts d'assurance. Chaque
-    fois que vos co\xFBts d'assurance changent, votre employeur est inform\xE9 de
-    la modification de leurs cotisations.\r\n\nChoisissez si vous voulez partager
-    vos donn\xE9es personnelles avec votre m\xE9decin afin d'obtenir des conseils
-    utiles, mais n'oubliez pas de prot\xE9ger votre vie priv\xE9e. \r\n"
+  m_Text: "Votre m\xE9decin vous diagnostique une maladie chronique. \r\n\r\nAfin
+    d\u2019\xE9viter des complications graves de la sant\xE9, vous devez g\xE9rer
+    plusieurs aspects de votre vie. Vous devez manger sainement, faire de l'exercice
+    r\xE9guli\xE8rement, g\xE9rer le stress et bien dormir. \r\n\r\nVotre m\xE9decin
+    vous propose d'utiliser des appareils num\xE9riques pour recueillir des donn\xE9es
+    sur votre comportement et sur votre physiologie. Si vous choisissez de lui envoyer
+    ces donn\xE9es, il vous enverra des conseils personnalis\xE9es pour vous aider
+    \xE0 faire des choix plus sains et \xE0 rester en bonne sant\xE9. \r\n\r\nVotre
+    assurance maladie priv\xE9e peut acc\xE9der aux donn\xE9es envoy\xE9es \xE0 votre
+    m\xE9decin. Selon votre mode de vie, elles peuvent augmenter ou diminuer vos co\xFBts
+    d'assurance. Chaque fois que vos co\xFBts d'assurance changent, votre employeur
+    est inform\xE9 de la modification de leurs c\xF4tisations. \r\n\r\nChoisissez
+    si vous voulez partager vos donn\xE9es personnelles avec votre m\xE9decin afin
+    d'obtenir des conseils utiles, mais n'oubliez pas de prot\xE9ger votre vie priv\xE9e."
 --- !u!222 &244852942
 CanvasRenderer:
   m_ObjectHideFlags: 0

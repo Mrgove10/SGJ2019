@@ -66,7 +66,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -79,6 +79,30 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Retourner au menu principal
+--- !u!132 &7139127031458238140
+GUIText:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131320672}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &1324740432
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +348,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -630,7 +654,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 230, y: 40}
+  m_SizeDelta: {x: 260, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2051574398
 CanvasRenderer:
@@ -747,8 +771,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 230, y: 40}
+  m_AnchoredPosition: {x: 0, y: -8}
+  m_SizeDelta: {x: 260, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2126154514
 CanvasRenderer:
@@ -1127,7 +1151,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2678,11 +2702,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoiceTitle
       objectReference: {fileID: 0}
+    - target: {fileID: 7590659682132765854, guid: 0a8f95368aa591d4c9838517ef58f409,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db,
+        type: 3}
+    - target: {fileID: 7590659683091401069, guid: 0a8f95368aa591d4c9838517ef58f409,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590659682675037805, guid: 0a8f95368aa591d4c9838517ef58f409,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db,
+        type: 3}
+    - target: {fileID: 7590659683895841968, guid: 0a8f95368aa591d4c9838517ef58f409,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d3d43a7b220b5154fba5f7f050d768db,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a8f95368aa591d4c9838517ef58f409, type: 3}
 --- !u!224 &1989019086 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7590659683008709660, guid: 0a8f95368aa591d4c9838517ef58f409,
+    type: 3}
+  m_PrefabInstance: {fileID: 7590659682831892946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1131320672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7590659683895841970, guid: 0a8f95368aa591d4c9838517ef58f409,
     type: 3}
   m_PrefabInstance: {fileID: 7590659682831892946}
   m_PrefabAsset: {fileID: 0}

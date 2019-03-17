@@ -45,11 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - Id: 0
-    Title: Reveil
+    Title: "R\xE9veil"
     ObjetName: bed
     Text: "Votre lit connect\xE9 a enregistr\xE9 des donn\xE9es sur la dur\xE9e et
       la qualit\xE9 de votre sommeil. Ces donn\xE9es peuvent aider votre m\xE9decin
-      \xE0 vous donner le feedback personnalis\xE9 sur votre sommeil.  Voulez-vous
+      \xE0 vous donner un feedback personnalis\xE9 sur votre sommeil.  Voulez-vous
       les envoyer ?"
     Heure: 7
     Minute: 0
@@ -57,15 +57,15 @@ MonoBehaviour:
       choix: 1
       "deltaSant\xE9": 20
       deltaViePriv: -20
-      Text: Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !
+      Text: Il semble que vous ayez eu une bonne nuit de sommeil, Emil !
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -20
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 1
-    Title: Peser
+    Title: Se peser
     ObjetName: Scale
     Text: "Votre balance connect\xE9e a enregistr\xE9 votre poids. Selon votre IMC,
       vous \xEAtes en surpoids. Ces donn\xE9es peuvent aider votre m\xE9decin \xE0
@@ -78,35 +78,36 @@ MonoBehaviour:
       "deltaSant\xE9": 25
       deltaViePriv: -25
       Text: "Vous \xEAtes en surpoids. Maigrir vous ferait du bien. Prenez un petit
-        d\xE9jeuner \xE0 <350 calories et faites au moins 30 minutes d'exercice aujourd\u2019hui."
+        d\xE9jeuner \xE0 moins de 350 calories et faites au moins 30 minutes d'exercice
+        aujourd\u2019hui."
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -25
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 2
     Title: "Petit D\xE9jeuner"
     ObjetName: fridge
     Text: "Votre frigo connect\xE9 enregistre que vous mangez des \u0153ufs pour le
       petit d\xE9jeuner (550 calories). Ces donn\xE9es peuvent aider votre m\xE9decin
       \xE0 vous proposer des conseils de nutrition et d\u2019exercice personnalis\xE9s.
-      Voulez-vous l\u2019envoyer ces donn\xE9es ?"
+      Voulez-vous envoyer ces donn\xE9es ?"
     Heure: 7
     Minute: 20
     ChoixOui:
       choix: 1
       "deltaSant\xE9": 15
       deltaViePriv: -15
-      Text: "Vous avez consommez 550 calories pour le petit d\xE9jeuner. Assurez-vous
+      Text: "Vous avez consomm\xE9 550 calories pour le petit d\xE9jeuner. Assurez-vous
         de ne pas d\xE9passer 900 calories au d\xE9jeuner. N'oubliez pas de faire
         au moins 30 minutes d'exercice aujourd'hui !"
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -15
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 3
     Title: "Au boul\xF4t !"
     ObjetName: desk
@@ -121,17 +122,16 @@ MonoBehaviour:
       choix: 1
       "deltaSant\xE9": 20
       deltaViePriv: -20
-      Text: "Votre niveau de stress est \xE9lev\xE9, {pseudo}. Cela peut affecter
-        votre sant\xE9 physique et mentale. Je vous recommande au moins 10 minutes
-        de m\xE9ditation."
+      Text: "Votre niveau de stress est \xE9lev\xE9, Emil. Cela peut affecter votre
+        sant\xE9 physique et mentale. Je vous recommande au moins 10 minutes de m\xE9ditation."
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -20
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 4
-    Title: Dejeuner
+    Title: "D\xE9jeuner"
     ObjetName: fridge
     Text: "Votre frigo connect\xE9 enregistre que vous mangez une demi-pizza et un
       petit cupcake pour le d\xE9jeuner (1350 calories). Ces donn\xE9es peuvent aider
@@ -143,17 +143,17 @@ MonoBehaviour:
       choix: 1
       "deltaSant\xE9": 25
       deltaViePriv: -25
-      Text: "Vous avez d\xE9pass\xE9 des calories recommand\xE9es. Assurez-vous de
-        ne pas d\xE9passer 300 calories au d\xEEner. N'oubliez pas de faire au moins
-        40 minutes d'exercice aujourd'hui !"
+      Text: "Vous avez d\xE9pass\xE9 le nombre de calories recommand\xE9. Assurez-vous
+        de ne pas d\xE9passer 300 calories au d\xEEner. N'oubliez pas de faire au
+        moins 40 minutes d'exercice aujourd'hui !"
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -25
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 5
-    Title: Prenez vos Medocs !
+    Title: "Prenez vos m\xE9dicaments !"
     ObjetName: pharmacy
     Text: "Votre bo\xEEte \xE0 pilules connect\xE9e enregistre que vous avez oubli\xE9
       de prendre vos m\xE9dicaments \xE0 l'heure. Ces donn\xE9es peuvent aider votre
@@ -166,18 +166,19 @@ MonoBehaviour:
       "deltaSant\xE9": 25
       deltaViePriv: -25
       Text: "Prendre vos m\xE9dicaments \xE0 l'heure tous les jours est important
-        pour votre traitement, {pseudo}. Je vais mettre un rappel sur votre smartphone
-        pour le reste de la semaine, pour m'assurer que vous n'oubliez pas une dose."
+        pour votre traitement, Emil. Je vais mettre un rappel sur votre smartphone
+        pour le reste de la semaine, pour m'assurer que vous n'oublierez pas une autre
+        dose."
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -25
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 6
     Title: Toilettes
     ObjetName: WC
-    Text: "Vos toilettes connect\xE9 sont \xE9quip\xE9es de capteurs qui recueillent
+    Text: "Vos toilettes connect\xE9s sont \xE9quip\xE9s de capteurs qui recueillent
       des informations sur votre microbiote. Ces donn\xE9es peuvent aider votre m\xE9decin
       \xE0 vous proposer des conseils personnalis\xE9s pour am\xE9liorer votre adh\xE9sion
       au traitement. Voulez-vous les envoyer ?"
@@ -187,16 +188,17 @@ MonoBehaviour:
       choix: 1
       "deltaSant\xE9": 20
       deltaViePriv: -20
-      Text: "Vous avez br\xFBl\xE9 290 calories {pseudo}. C'est g\xE9nial ! Attention,
-        ne d\xE9passez pas de 350 calories pour d\xEEner !"
+      Text: "Selon votre profil de microbiote, vous devriez ajouter plus de fibres
+        \xE0 votre r\xE9gime. Je vous conseille de manger des c\xE9r\xE9ales compl\xE8tes
+        pour le petit-d\xE9jeuner demain ! "
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -20
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 7
-    Title: Aller faire du sport !
+    Title: Allez faire du sport !
     ObjetName: door
     Text: "Vous \xEAtes sur le point d'aller courir. Votre montre intelligente capte
       votre temps d\u2019exercice et les calories br\xFBl\xE9es. Ces donn\xE9es peuvent
@@ -208,14 +210,14 @@ MonoBehaviour:
       choix: 1
       "deltaSant\xE9": 25
       deltaViePriv: -20
-      Text: "Vous avez br\xFBl\xE9 290 calories Emil. C'est g\xE9nial ! Attention,
-        ne d\xE9passez pas de 350 calories pour d\xEEner !"
+      Text: "Vous avez br\xFBl\xE9 290 calories, Emil. C'est g\xE9nial ! Attention,
+        ne d\xE9passez pas 350 calories pour d\xEEner !"
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -25
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 8
     Title: Diner
     ObjetName: fridge
@@ -229,32 +231,32 @@ MonoBehaviour:
       choix: 1
       "deltaSant\xE9": 20
       deltaViePriv: -20
-      Text: "Vous avez d\xE9pass\xE9 des calories recommand\xE9es, {pseudo}. Pour
-        votre prochain repas, remplissez la moiti\xE9 de votre assiette de l\xE9gumes."
+      Text: "Vous avez d\xE9pass\xE9 des calories recommand\xE9es, Emil. Pour votre
+        prochain repas, remplissez la moiti\xE9 de votre assiette de l\xE9gumes."
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -20
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
   - Id: 9
     Title: Allez dormir
     ObjetName: bed
-    Text: "Votre lit connect\xE9 a enregistr\xE9 des donn\xE9es sur l\u2019heure que
-      vous vous couchez. Ces donn\xE9es peuvent aider votre m\xE9decin \xE0 vous proposer
-      des conseils personnalis\xE9s pour am\xE9liorer votre adh\xE9sion au traitement.
-      Voulez-vous les envoyer ?"
+    Text: "Votre lit connect\xE9 a enregistr\xE9 des donn\xE9es sur l\u2019heure \xE0
+      laquelle vous vous couchez. Ces donn\xE9es peuvent aider votre m\xE9decin \xE0
+      vous proposer des conseils personnalis\xE9s pour am\xE9liorer votre adh\xE9sion
+      au traitement. Voulez-vous les envoyer ?"
     Heure: 22
     Minute: 30
     ChoixOui:
       choix: 1
       "deltaSant\xE9": 15
       deltaViePriv: -15
-      Text: "D'apr\xE8s de vos donn\xE9es, l'heure id\xE9ale \xE0 vous r\xE9veiller
-        demain est \xE0 7:00 du matin."
+      Text: "D'apr\xE8s vos donn\xE9es, l'heure id\xE9ale pour vous r\xE9veiller demain
+        matin est 7:00."
     ChoixNon:
       choix: 0
       "deltaSant\xE9": -15
       deltaViePriv: 0
-      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
-        J'esp\xE8re que vous me l'enverrez demain."
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me les enverrez demain."
