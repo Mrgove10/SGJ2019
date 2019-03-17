@@ -156,9 +156,8 @@ public class Interaction : MonoBehaviour
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
 
-        if (Mission.Id >= 10)
+        if (Variables.CurrentMissionID >= 10)
         {
-            BlackScreen bs = new BlackScreen();
             bs.FadeIn();
             SceneManager.LoadSceneAsync("EndGame");
         }
