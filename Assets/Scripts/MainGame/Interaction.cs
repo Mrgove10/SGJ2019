@@ -1,6 +1,5 @@
-﻿using Assets.Scripts;
-using System.Collections.Generic;
-using System.IO;
+﻿using System;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -168,7 +167,7 @@ public class Interaction : MonoBehaviour
     {
         Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
-
+        Debug.Log(Variables.JaugeSante + "++++" + Variables.JaugeViePriv);
         //TODO :  fondu au noir ici
     }
 

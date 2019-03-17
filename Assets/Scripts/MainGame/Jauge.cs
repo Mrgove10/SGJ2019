@@ -1,5 +1,4 @@
-﻿using System;
-using Assets.Scripts;
+﻿using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,7 +35,7 @@ public class Jauge : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Variables.JaugeSante = (int)jaugeSante.value;
-        Variables.JaugeViePriv =  (int)jaugeViePriv.value;
+        jaugeSante.value = Variables.JaugeSante;
+        jaugeViePriv.value = Variables.JaugeViePriv;
     }
 }
