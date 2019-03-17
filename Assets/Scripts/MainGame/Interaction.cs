@@ -1,9 +1,7 @@
-﻿using System;
-using Assets.Scripts;
+﻿using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 public class Interaction : MonoBehaviour
 {
@@ -123,11 +121,10 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-       
         if (OtherObject != null)
         {
-            if (Mission.Id ==null || Mission.Id < 10)
-            { 
+            if (Mission.Id == null || Mission.Id < 10)
+            {
                 if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
                 {
                     InteractionText.SetActive(true);

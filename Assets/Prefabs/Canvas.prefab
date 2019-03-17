@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 1324740435}
   - component: {fileID: 1324740434}
   - component: {fileID: 1324740433}
-  - component: {fileID: 1324740437}
   m_Layer: 5
   m_Name: EscapeMenu
   m_TagString: Untagged
@@ -180,36 +179,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1324740437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324740432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be68c2bab5ed94243addd7b19f59759a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mission:
-    Id: 0
-    Title: 
-    ObjetName: 
-    Text: 
-    Heure: 0
-    Minute: 0
-    ChoixOui:
-      choix: 0
-      "deltaSant\xE9": 0
-      deltaViePriv: 0
-      Text: 
-    ChoixNon:
-      choix: 0
-      "deltaSant\xE9": 0
-      deltaViePriv: 0
-      Text: 
-  MissionNameText: {fileID: 0}
 --- !u!1 &1360902493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,13 +1910,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7139127030737043349}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.30980393, b: 0.3137255, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2089,13 +2058,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7139127030912445034}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3066038, b: 0.31122643, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
