@@ -1,34 +1,66 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BlackScreen : MonoBehaviour
 {
-    public float speed;
+    public float speed = 1f;
+    public Image maskImage;
 
-    public Image ImageToFade;
-    // Start is called before the first frame update
-    void Start()
+    private IEnumerator coroutine;
+
+    public void Start()
     {
-     //   ImageToFade.a
+        coroutine = FadeOutCoroutine();
+        StartCoroutine(coroutine);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private IEnumerator FadeInCoroutine(bool followedByFadeOut)
     {
-        
+        float t = 0f;
+        Color c = maskImage.color;
+        while (t <= 1f)
+        {
+            t += Time.deltaTime * speed;
+            c.a = Mathf.Clamp01(t);
+            maskImage.color = c;
+            yield return null;
+        }
+        if (followedByFadeOut)
+        {
+            coroutine = FadeOutCoroutine();
+            StartCoroutine(coroutine);
+        }
     }
 
-    public void StartFade()
+    private IEnumerator FadeOutCoroutine()
     {
-        StartCoroutine("FadeImage");
+        float t = 0f;
+        Color c = maskImage.color;
+        while (t <= 1f)
+        {
+            t += Time.deltaTime * speed;
+            c.a = 1f - Mathf.Clamp01(t);
+            maskImage.color = c;
+            yield return null;
+        }
     }
 
-   /* IEnumerator FadeImage(bool fadeAway)
+    public void FadeIn()
     {
-        // fade from opaque to transparent
-      
-    }*/
+        coroutine = FadeInCoroutine(false);
+        StartCoroutine(coroutine);
+    }
 
+    public void FadeOut()
+    {
+        coroutine = FadeOutCoroutine();
+        StartCoroutine(coroutine);
+    }
+
+    public void Ellipse()
+    {
+        coroutine = FadeInCoroutine(true);
+        StartCoroutine(coroutine);
+    }
 }
