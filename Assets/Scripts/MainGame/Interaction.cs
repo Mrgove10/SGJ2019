@@ -21,7 +21,7 @@ public class Interaction : MonoBehaviour
     #region choicewidow2
 
     public GameObject ChoiceWindowtwo;
-    public Button YesButtontwo;
+    public Button okButtontwo;
     public Text ChoiceParagraphtwo;
 
     #endregion choicewidow2
@@ -69,10 +69,10 @@ public class Interaction : MonoBehaviour
         {
             ChoiceParagraphtwo = GameObject.Find("ChoiceParagraphtwo").GetComponent<Text>();
         }
-        if (YesButtontwo == null)
+        if (okButtontwo == null)
         {
-            YesButtontwo = GameObject.Find("okButtontwo").GetComponent<Button>();
-            YesButtontwo.onClick.AddListener(YesButtonClicked);
+            okButtontwo = GameObject.Find("okButtontwo").GetComponent<Button>();
+            okButtontwo.onClick.AddListener(okButtonClicked);
         }
 
         if (ChoiceWindowtwo == null)
@@ -222,16 +222,22 @@ public class Interaction : MonoBehaviour
     {
         if (etat == true)
         {
-            ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
-            ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
+            ChoiceParagraphtwo.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixOui.Text;    
 
         }
 
         if (etat == false)
         {
+            ChoiceParagraphtwo.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixOui.Text;
 
         }
 
         ChoiceWindow.SetActive(false);
+    }
+
+    private void okButtonClicked()
+    {
+        
+        AfterConfirmation(false);
     }
 }
