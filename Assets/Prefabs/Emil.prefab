@@ -1288,6 +1288,10 @@ MonoBehaviour:
   NoButton: {fileID: 0}
   ChoiceTitle: {fileID: 0}
   ChoiceParagraph: {fileID: 0}
+  ChoiceWindowtwo: {fileID: 0}
+  okButtontwo: {fileID: 0}
+  ChoiceParagraphtwo: {fileID: 0}
+  bs: {fileID: 0}
   Audiosource: {fileID: 0}
   Mission:
     Id: 0

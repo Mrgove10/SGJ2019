@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Interaction : MonoBehaviour
 {
@@ -21,11 +22,12 @@ public class Interaction : MonoBehaviour
     #region choicewidow2
 
     public GameObject ChoiceWindowtwo;
-    public Button YesButtontwo;
-    public Text ChoiceTitletwo;
+    public Button okButtontwo;
     public Text ChoiceParagraphtwo;
 
     #endregion choicewidow2
+
+    public BlackScreen bs;
 
     public AudioSource Audiosource;
 
@@ -70,10 +72,10 @@ public class Interaction : MonoBehaviour
         {
             ChoiceParagraphtwo = GameObject.Find("ChoiceParagraphtwo").GetComponent<Text>();
         }
-        if (YesButtontwo == null)
+        if (okButtontwo == null)
         {
-            YesButtontwo = GameObject.Find("okButtontwo").GetComponent<Button>();
-            YesButtontwo.onClick.AddListener(YesButtonClicked);
+            okButtontwo = GameObject.Find("okButtontwo").GetComponent<Button>();
+            okButtontwo.onClick.AddListener(okButtonClicked);
         }
 
         if (ChoiceWindowtwo == null)
@@ -206,7 +208,8 @@ public class Interaction : MonoBehaviour
     {
         Variables.CurrentMissionID++;
         ChoiceWindow.SetActive(false);
-
+        ChoiceWindowtwo.SetActive(true);
+        ShowpopupSecondaire(choice);
         //TODO :  fondu au noir ici  elipse
     }
 
@@ -218,11 +221,24 @@ public class Interaction : MonoBehaviour
         ChoiceWindow.SetActive(true);
     }
 
-    private ShowpopupSecondaire()
+    private void ShowpopupSecondaire(bool etat)
     {
-        ChoiceTitle.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Title;
-        ChoiceParagraph.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).Text;
+        if (etat == true)
+        {
+            ChoiceParagraphtwo.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixOui.Text;
+        }
 
-        ChoiceWindow.SetActive(true);
+        if (etat == false)
+        {
+            ChoiceParagraphtwo.text = Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ChoixNon.Text;
+        }
+
+        ChoiceWindow.SetActive(false);
+    }
+
+    private void okButtonClicked()
+    {
+        ChoiceWindowtwo.SetActive(false);
+        bs.Ellipse();
     }
 }
