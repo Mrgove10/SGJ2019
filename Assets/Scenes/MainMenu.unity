@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -991,37 +991,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - Id: 0
-    Title: 
-    ObjetName: 
-    Text: 
-    Heure: 0
+    Title: Reveil
+    ObjetName: bed
+    Text: "Votre lit connect\xE9 a enregistr\xE9 des donn\xE9es sur la dur\xE9e et
+      la qualit\xE9 de votre sommeil. Ces donn\xE9es peuvent aider votre m\xE9decin
+      \xE0 vous donner le feedback personnalis\xE9 sur votre sommeil.  Voulez-vous
+      les envoyer ?"
+    Heure: 7
     Minute: 0
     ChoixOui:
-      choix: 0
-      "deltaSant\xE9": 0
-      deltaViePriv: 0
-      Text: 
+      choix: 1
+      "deltaSant\xE9": 20
+      deltaViePriv: -20
+      Text: Il semble que vous avez eu une bonne nuit de sommeil, {pseudo} !
     ChoixNon:
       choix: 0
-      "deltaSant\xE9": 0
+      "deltaSant\xE9": -20
       deltaViePriv: 0
-      Text: 
-  - Id: 0
-    Title: 
-    ObjetName: 
-    Text: 
-    Heure: 0
-    Minute: 0
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
+        J'esp\xE8re que vous me l'enverrez demain."
+  - Id: 1
+    Title: Peser
+    ObjetName: Scale
+    Text: "Votre balance connect\xE9e a enregistr\xE9 votre poids. Selon votre IMC,
+      vous \xEAtes en surpoids. Ces donn\xE9es peuvent aider votre m\xE9decin \xE0
+      vous proposer des conseils de nutrition et d\u2019exercice personnalis\xE9s.
+      Voulez-vous les envoyer ?"
+    Heure: 7
+    Minute: 10
     ChoixOui:
-      choix: 0
-      "deltaSant\xE9": 0
-      deltaViePriv: 0
-      Text: 
+      choix: 1
+      "deltaSant\xE9": 25
+      deltaViePriv: -25
+      Text: "Vous \xEAtes en surpoids. Maigrir vous ferait du bien. Prenez un petit
+        d\xE9jeuner \xE0 <350 calories et faites au moins 30 minutes d'exercice aujourd\u2019hui."
     ChoixNon:
       choix: 0
-      "deltaSant\xE9": 0
+      "deltaSant\xE9": -25
       deltaViePriv: 0
-      Text: 
+      Text: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, {pseudo}.
+        J'esp\xE8re que vous me l'enverrez demain."
   - Id: 0
     Title: 
     ObjetName: 
