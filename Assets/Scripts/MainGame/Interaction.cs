@@ -1,6 +1,7 @@
 ﻿using System;
 using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
@@ -118,8 +119,15 @@ public class Interaction : MonoBehaviour
         }
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
-        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
-        MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+    //    MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+      //  MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
+      if (Mission.Id >= 10)
+      {
+          BlackScreen bs = new BlackScreen();
+          bs.FadeIn();
+          SceneManager.LoadSceneAsync("EndGame");
+      }
+
         Debug.Log(Mission.Id);
     }
 

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,16 +9,14 @@ public class BlackScreen : MonoBehaviour
 
     private IEnumerator coroutine;
 
-    private void Start()
+    public void Start()
     {
         coroutine = FadeOutCoroutine();
         StartCoroutine(coroutine);
     }
 
-
-    IEnumerator FadeInCoroutine(bool followedByFadeOut)
+    private IEnumerator FadeInCoroutine(bool followedByFadeOut)
     {
-        
         float t = 0f;
         Color c = maskImage.color;
         while (t <= 1f)
@@ -34,13 +31,10 @@ public class BlackScreen : MonoBehaviour
             coroutine = FadeOutCoroutine();
             StartCoroutine(coroutine);
         }
-
     }
 
-
-    IEnumerator FadeOutCoroutine()
+    private IEnumerator FadeOutCoroutine()
     {
-
         float t = 0f;
         Color c = maskImage.color;
         while (t <= 1f)
@@ -69,11 +63,4 @@ public class BlackScreen : MonoBehaviour
         coroutine = FadeInCoroutine(true);
         StartCoroutine(coroutine);
     }
-
-    /* IEnumerator FadeImage(bool fadeAway)
-     {
-         // fade from opaque to transparent
-
-     }*/
-
 }
