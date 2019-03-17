@@ -245,6 +245,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: missions.Array.data[0].ChoixOui.Text
+      value: Il semble que vous avez eu une bonne nuit de sommeil, Emil !
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: missions.Array.data[0].ChoixNon.Text
+      value: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me l'enverrez demain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: missions.Array.data[1].ChoixNon.Text
+      value: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me l'enverrez demain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: missions.Array.data[2].ChoixNon.Text
+      value: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me l'enverrez demain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: missions.Array.data[3].ChoixOui.Text
+      value: "tre niveau de stress est \xE9lev\xE9, Emil. Cela peut affecter votre
+        sant\xE9 physique et mentale. Je vous recommande au moins 10 minutes de m\xE9ditation."
+      objectReference: {fileID: 0}
+    - target: {fileID: 876920536185899772, guid: 79a3499635dc93a4cb2e527567d9986e,
+        type: 3}
+      propertyPath: missions.Array.data[3].ChoixNon.Text
+      value: "Ces donn\xE9es sont utiles pour personnaliser votre suivi, Emil. J'esp\xE8re
+        que vous me l'enverrez demain."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a3499635dc93a4cb2e527567d9986e, type: 3}
 --- !u!1 &497380839
