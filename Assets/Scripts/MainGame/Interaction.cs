@@ -123,17 +123,20 @@ public class Interaction : MonoBehaviour
     {
         if (OtherObject != null)
         {
-            if (Mission.Id == null || Mission.Id < 10)
+            if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
             {
-                if (Variables.MissionList.Find(Mission => Mission.Id == Variables.CurrentMissionID).ObjetName == OtherObject.name)
+                InteractionText.SetActive(true);
+                Debug.Log("I am a door");
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    InteractionText.SetActive(true);
-                    Debug.Log("I am a door");
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        Showpopup();
-                    }
+                    Showpopup();
                 }
+            }
+
+            if (Variables.CurrentMissionID >= 10)
+            {
+                bs.FadeIn();
+                SceneManager.LoadSceneAsync("EndGame");
             }
         }
         Mission FirstMission = Variables.MissionList.Find(mission => mission.Id == 0);
@@ -155,12 +158,6 @@ public class Interaction : MonoBehaviour
         }
 
         MissionNameText.text = Variables.MissionList.Find(mission => mission.Id == Variables.CurrentMissionID).Title;
-
-        if (Variables.CurrentMissionID >= 10)
-        {
-            bs.FadeIn();
-            SceneManager.LoadSceneAsync("EndGame");
-        }
 
         Debug.Log(Mission.Id);
     }
@@ -210,7 +207,11 @@ public class Interaction : MonoBehaviour
         ChoiceWindow.SetActive(false);
         ChoiceWindowtwo.SetActive(true);
         ShowpopupSecondaire(choice);
-        //TODO :  fondu au noir ici  elipse
+        if (Variables.CurrentMissionID > 9)
+        {
+            bs.FadeIn();
+            SceneManager.LoadSceneAsync("EndGame");
+        }
     }
 
     private void Showpopup()
