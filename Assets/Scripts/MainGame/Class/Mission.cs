@@ -1,33 +1,24 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 
 namespace Assets.Scripts.MainGame.Class
 {
-    [Serializable]
+    [System.Serializable]
     public class Mission
     {
-        [JsonProperty("Id")]
         public int Id;
-
-        [JsonProperty("Title")]
+        
         public string Title;
-
-        [JsonProperty("ObjetName")]
+        
         public string ObjetName;
-
-        [JsonProperty("Text")]
+        
         public string Text;
-
-        [JsonProperty("Heure")]
-        public int Heure;
-
-        [JsonProperty("Minute")]
-        public int Minute;
-
-        [JsonProperty("ChoixOui")]
+        
+        public int Heure = 0;
+        
+        public int Minute = 0;
+        
         public Choix ChoixOui;
-
-        [JsonProperty("ChoixNon")]
+        
         public Choix ChoixNon;
     }
 }

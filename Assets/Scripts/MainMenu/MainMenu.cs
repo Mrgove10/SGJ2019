@@ -1,6 +1,5 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.MainGame.Class;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,12 +15,14 @@ public class MainMenu : MonoBehaviour
     public InputField InputNom;
     private string FileContent;
     public TextAsset Json;
+    public Scenario scenario;
 
     private void Start()
     {
         if (PlayButton == null)
         {
             PlayButton = GameObject.Find("PlayButton").GetComponent<Button>();
+            Variables.MissionList = scenario.missions;
             PlayButton.onClick.AddListener(OnPlayButtonClicked);
         }
 
@@ -62,7 +63,7 @@ public class MainMenu : MonoBehaviour
     {
         Variables.NomJoueur = InputNom.text;
         Debug.Log("Nom choisi par le joueur: " + Variables.NomJoueur);
-        LoadGameStory(InputNom.text);
+        //LoadGameStory(InputNom.text);
         SceneManager.LoadSceneAsync("LoadingInfo");
     }
 
@@ -75,22 +76,22 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
-    private void LoadGameStory(string PlayerName)
-    {
-        // Path.Combine combines strings into a file path
-        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
-        string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
+    //private void LoadGameStory(string PlayerName)
+    //{
+    //    // Path.Combine combines strings into a file path
+    //    // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, and the StreamingAssets folder in a build
+    //    string filePath = Path.Combine(Application.streamingAssetsPath, "Story.json");
 
-        if (File.Exists(filePath))
-        {
-            // Read the json from the file into a string
-            FileContent = File.ReadAllText(filePath);
-            FileContent = FileContent.Replace("{pseudo}", PlayerName);
-            Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
-        }
-        else
-        {
-            Debug.LogError("Cannot load game data!");
-        }
-    }
+    //    if (File.Exists(filePath))
+    //    {
+    //        // Read the json from the file into a string
+    //        FileContent = File.ReadAllText(filePath);
+    //        FileContent = FileContent.Replace("{pseudo}", PlayerName);
+    //        Variables.MissionList = JsonConvert.DeserializeObject<List<Mission>>(FileContent);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("Cannot load game data!");
+    //    }
+    //}
 }
